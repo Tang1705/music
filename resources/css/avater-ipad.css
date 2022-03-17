@@ -5,8 +5,8 @@ body {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    color: #fff;
-    font-family: 'Exo 2';
+    /*color: #fff;*/
+    /*font-family: 'Exo 2';*/
     /*font-size: 24px;*/
     animation: fadeIn 500ms reverse;
 }
