@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Exo+2');
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: #fff;
+    font-family: 'Exo 2';
+    /*font-size: 24px;*/
+    animation: fadeIn 500ms reverse;
+}
+
+.tang {
+    background-image: linear-gradient(120deg, #34e0f0 0%, rgba(180, 0, 255, 0.56) 100%);
+    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+    position: absolute;
+    bottom: 7.5%;
+    right: 11.5%;
+    width: 6.5rem;
+    height: 6.5rem;
+    animation: morph 3s linear infinite;
+    transform-style: preserve-3d;
+    outline: 1px solid transparent;
+    will-change: border-radius;
+}
+
+.tang:before,
+.tang:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+    box-shadow: 5px 5px 89px rgba(0, 102, 255, 0.21);
+    will-change: border-radius, transform, opacity;
+    animation-delay: 200ms;
+    background-image: linear-gradient(120deg, rgba(170,208,239, .55) 0%, rgba(170,208,239, .89) 100%);
+}
+
+.tang:before {
+    animation: morph 3s linear infinite;
+    opacity: .21;
+    animation-duration: 1.5s;
+}
+
+.tang:after {
+    animation: morph 3s linear infinite;
+    animation-delay: 400ms;
+    opacity: .89;
+    /*content: "What'cSS up?";*/
+    line-height: 120px;
+    text-indent: -21px;
+}
+
+.yolk {
+    background-image: linear-gradient(120deg, #eeb89b 0%, #ff9560 100%);
+    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+    position: absolute;
+    bottom: 6.8%;
+    right: 4.6%;
+    width: 6.5rem;
+    height: 6.5rem;
+    animation: morph 3s linear infinite;
+    transform-style: preserve-3d;
+    outline: 1px solid transparent;
+    will-change: border-radius;
+}
+
+.yolk:before,
+.yolk:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+    box-shadow: 5px 5px 89px rgba(248,231,163, 0.21);
+    will-change: border-radius, transform, opacity;
+    animation-delay: 200ms;
+    background-image: linear-gradient(120deg, rgba(248,231,163, .55) 0%, rgba(248,231,163, .89) 100%);
+}
+
+
+
+.yolk:before {
+    animation: morph 3s linear infinite;
+    opacity: .21;
+    animation-duration: 1.5s;
+}
+
+.yolk:after {
+    animation: morph 3s linear infinite;
+    animation-delay: 400ms;
+    opacity: .89;
+    /*content: "What'cSS up?";*/
+    line-height: 120px;
+    text-indent: -21px;
+}
+
+@keyframes morph {
+    0%, 100% {
+        border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+        transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+    }
+    34% {
+        border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
+        transform: translate3d(0, 5px, 0) rotateZ(0.01deg);
+    }
+    50% {
+        opacity: .89;
+        transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+    }
+    67% {
+        border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+        transform: translate3d(0, -3px, 0) rotateZ(0.01deg);
+    }
+}
+
+@keyframes fadeIn {
+    100% {
+        transform: scale(1.03);
+        opacity: 0;
+    }
+}
+
+.circle {
+    background-color: rgba(255,255,255,0.75);
+    border-radius: 50%;
+    height: 5.8rem;
+    width: 5.8rem;
+}

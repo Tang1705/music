@@ -1,0 +1,459 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,700);
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fffdfd;
+    color: #515044;
+    font-family: "Raleway", sans-serif;
+    /*font-size: 18px;*/
+}
+
+#right-top {
+    /*background-color: #AAD0EF;*/
+    position: absolute;
+    width: 50%;
+    /*height: 50%;*/
+    right: 0;
+    top: 0;
+    border-bottom: 28.8rem solid;
+    border-left: 10rem solid transparent;
+    height: 0;
+    color: #AAD0EF;
+}
+
+#left-top {
+    /*background-color: #ffffff;*/
+    /*background-image: linear-gradient(5deg, rgba(220, 220, 220, 0.8), white);*/
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    left: 0;
+    top: 0;
+}
+
+#left-bottom {
+    /*background-color: #F8E7A3;*/
+    position: absolute;
+    width: 50%;
+    /*height: 50%;*/
+    left: 0;
+    bottom: 0;
+    border-top: 28.8rem solid;
+    border-right: 10rem solid transparent;
+    height: 0;
+    color: #F8E7A3;
+}
+
+#right-bottom {
+    /*background-color: #F8E7A3;*/
+    /*background-image: linear-gradient(to bottom left, rgba(220, 220, 220, 0.8), white);*/
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    right: 0;
+    bottom: 0;
+}
+
+.music-player-container {
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    height: 555px;
+    /*height: 740px;*/
+    position: absolute;
+    min-width: 690px;
+    /*min-width: 920px;*/
+    left: 43%;
+    top: 50%;
+}
+
+.music-player-container:after {
+    -webkit-filter: blur(8px);
+    filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.8);
+    bottom: -2px;
+    content: " ";
+    display: block;
+    height: 10px;
+    left: 19px;
+    position: absolute;
+    transform: rotate(-3deg);
+    width: 70%;
+    z-index: 0;
+}
+
+.music-player {
+    background-color: #ffffff;
+    box-shadow: -20rem 20rem 20rem rgba(0, 0, 0, .5);
+    /*考虑浏览器兼容性*/
+    -moz-box-shadow: -20rem 20rem 20rem 20rem rgba(0, 0, 0, .5);
+    -webkit-box-shadow: -2rem 2rem 4rem 2rem rgba(0, 0, 0, .3);
+    height: 555px;
+    padding: 40px 250px 40px 40px;
+    position: absolute;
+    text-align: right;
+    width: 690px;
+    z-index: 15;
+}
+
+.player-content-container {
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    top: 30%;
+    position: relative;
+}
+
+.artist-name {
+    font-size: 56px;
+    font-weight: normal;
+    margin: 0 0 0.75em 0;
+}
+
+.album-title {
+    font-weight: 200;
+    font-size: 48px;
+    margin: 0 0 1.75em 0;
+}
+
+.song-title {
+    font-size: 36px;
+    font-weight: 200;
+    margin: 0 0 1.5em 0;
+}
+
+.album {
+    box-shadow: 3rem 3rem 15rem rgba(0, 0, 0, 0.65);
+    height: 472.5px;
+    /*height: 630px;*/
+    margin-left: 450px;
+    margin-top: 40px;
+    position: relative;
+    width: 472.5px;
+    /*width: 630px;*/
+    z-index: 10;
+}
+
+.album-art {
+    background: #fff url("../img/cover.png") center/cover no-repeat;
+    height: 472.5px;
+    position: relative;
+    width: 472.5px;
+    z-index: 10;
+}
+
+.vinyl {
+    -webkit-animation: spin 2s linear infinite;
+    -moz-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+    -webkit-transition: all 500ms;
+    -moz-transition: all 500ms;
+    transition: all 500ms;
+    background-image: url("https://repo.bfw.wiki/bfwrepo/images/music/changpian/vinyl.png"), url("../img/cover.png");
+    background-position: center, center;
+    background-size: cover, 40% auto;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    height: 450px;
+    /*height: 600px;*/
+    left: 0;
+    position: absolute;
+    top: 10px;
+    width: 450px;
+    /*width: 600px;*/
+    z-index: 5;
+    will-change: transform, left;
+}
+
+.is-playing .vinyl {
+    left: 52%;
+}
+
+.is-pausing .vinyl {
+    left: 0;
+}
+
+.music-player-controls {
+    text-align: center;
+}
+
+[class^=control-] {
+    -webkit-filter: brightness(95%);
+    filter: brightness(95%);
+    border-radius: 100%;
+    display: inline-block;
+    height: 44px;
+    margin: 0 3px;
+    width: 44px;
+}
+
+[class^=control-]:hover {
+    -webkit-filter: brightness(85%);
+    filter: brightness(85%);
+    cursor: pointer;
+}
+
+.control-play {
+    background: transparent url("https://repo.bfw.wiki/bfwrepo/images/music/changpian/play.svg") center/cover no-repeat;
+}
+
+.is-playing .control-play {
+    background: transparent url("https://repo.bfw.wiki/bfwrepo/images/music/changpian/pause.svg") center/cover no-repeat;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes spin {
+    0% {
+        -moz-transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.lyric {
+    width: 255px;
+    height: 55%;
+    /*margin:0 auto;*/
+    top: 25%;
+    left: 1%;
+    overflow: hidden;
+}
+
+ul {
+    transition-duration: 600ms;
+}
+
+ul, li {
+    list-style: none;
+    padding-top: 0.3rem;
+    margin: 0;
+    color: rgba(0, 0, 0, .3);
+    font-size: 16px;
+}
+
+li.on {
+    background-color: rgba(91,120,206,.8);
+    border-radius:25px;
+    color: #ffffff;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    height: 4rem;
+    font-size: 22px;
+}
+
+p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 24px;
+    line-height: 24px;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.progress-bar {
+    position: absolute;
+    width: 50%;
+    left: 10%;
+    top: 79%;
+    z-index: 55;
+}
+
+.music {
+    /*margin-top: 55rem;*/
+    /*padding: 30px;*/
+    box-sizing: border-box;
+    /*background:rgba(0, 0, 0, 0.5);*/
+    display: flex;
+}
+
+.info {
+    color: #fff;
+    margin-left: 30px;
+    flex: 1;
+}
+
+.controls {
+    margin-top: 4.5rem;
+    margin-left: -7.4rem;
+    /*padding-bottom: 1.5rem;*/
+    display: flex;
+    align-items: center;
+}
+
+.controls img {
+    width: 1rem;
+    margin-left: 0.6rem;
+    cursor: pointer;
+}
+
+#progressbar {
+    /*margin-top: -1.6rem;*/
+    background-color: white;
+    color: white;
+    height: 2rem;
+    z-index: 45;
+}
+
+#top {
+    position: absolute;
+    width: 42%;
+    /*height: 50%;*/
+    right: 0;
+    top: 0;
+    border-bottom: 23.15rem solid;
+    border-left: 7.5rem solid transparent;
+    height: 0;
+    color: #AAD0EF;
+    z-index: 30;
+}
+
+#high{
+    position: absolute;
+    background: url("../assets/gaoyin1.svg") center/cover no-repeat;
+    background-size: 90%;
+    width: 39.3%;
+    height: 55%;
+    left: 69%;
+    /*top: 0;*/
+    bottom: 46.5%;
+    z-index: 30;
+}
+
+#bottom {
+    position: absolute;
+    width: 50.2%;
+    /*height: 50%;*/
+    right: 0;
+    bottom: 0;
+    border-bottom: 16.15rem solid;
+    border-left: 8rem solid transparent;
+    height: 0;
+    color: #F8E7A3;
+    z-index: 30;
+}
+
+#low{
+    position: absolute;
+    background: url("../assets/diyin1.svg") center/cover no-repeat;
+    background-size: 75%;
+    width: 39.3%;
+    height: 55%;
+    left: 68.3%;
+    bottom: 3.9%;
+    z-index: 30;
+}
+
+#circle {
+    position: absolute;
+    background-color: white;
+    top: 14.9%;
+    left: 43.6%;
+    border-radius: 50%;
+    height: 22.5rem;
+    width: 22.5rem;
+    z-index: 35;
+}
+
+#disk {
+    position: absolute;
+    width: 25rem;
+    height: 30rem;
+    background: url("../img/disk.png") center/cover no-repeat;
+    background-size: 21.5rem, 21.5rem;
+    bottom: 18%;
+    right: 15%;
+    z-index: 40;
+}
+
+#manner {
+    position: absolute;
+    width: 62%;
+    /*background-color: white;*/
+    /*box-shadow: -20rem 20rem 20rem rgba(0, 0, 0, .5);*/
+    /*-moz-box-shadow: -20rem 20rem 20rem rgba(0, 0, 0, .5);*/
+    -webkit-box-shadow: -2rem -2rem 4rem rgba(0, 0, 0, .3);
+    border-top: 5rem solid;
+    border-right: 1.5rem solid transparent;
+    color: white;
+    bottom: 0;
+    z-index: 45;
+}
+
+#corner {
+    position: absolute;
+    width: 12%;
+    /*background-color: white;*/
+    /*box-shadow: -20rem 20rem 20rem rgba(0, 0, 0, .5);*/
+    /*-moz-box-shadow: -20rem 20rem 20rem rgba(0, 0, 0, .5);*/
+    /*-webkit-box-shadow: -2rem -2rem 4rem  rgba(0, 0, 0, .3);*/
+    border-top: 5rem solid;
+    border-right: 1.5rem solid transparent;
+    color: #4D59F5;
+    bottom: 0;
+    z-index: 50;
+}
+
+#corner-right {
+    position: absolute;
+    width: 10%;
+    /*background-color: white;*/
+    /*box-shadow: -20rem 20rem 20rem rgba(0, 0, 0, .5);*/
+    /*-moz-box-shadow: -20rem 20rem 20rem rgba(0, 0, 0, .5);*/
+    /*-webkit-box-shadow: -2rem -2rem 4rem  rgba(0, 0, 0, .3);*/
+    border-bottom: 5rem solid;
+    border-left: 1.5rem solid transparent;
+    color: #ffffff;
+    bottom: 0;
+    right: 0;
+    z-index: 50;
+}
+
+#current-time{
+    position: absolute;
+    z-index: 65;
+    left: 37%;
+    top: 48%;
+}
+
+#waveform {
+    margin-top: -2.2rem;
+}

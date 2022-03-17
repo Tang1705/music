@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Raleway:400,300,700);
+
+        *, *:before, *:after {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #fffdfd;
+            color: #515044;
+            font-family: "Raleway", sans-serif;
+            /*font-size: 18px;*/
+        }
+
+        .music-player-container {
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            display: inline-block;
+            height: 555px;
+            /*height: 740px;*/
+            position: absolute;
+            min-width: 690px;
+            /*min-width: 920px;*/
+            left: 43%;
+            top: 50%;
+        }
+
+        .music-player-container:after {
+            -webkit-filter: blur(8px);
+            filter: blur(8px);
+            background-color: rgba(0, 0, 0, 0.8);
+            bottom: -2px;
+            content: " ";
+            display: block;
+            height: 10px;
+            left: 19px;
+            position: absolute;
+            transform: rotate(-3deg);
+            width: 70%;
+            z-index: 0;
+        }
+
+        .music-player {
+            background-color: #333;
+            height: 555px;
+            padding: 40px 250px 40px 40px;
+            position: absolute;
+            text-align: right;
+            width: 690px;
+            z-index: 3;
+        }
+
+        .player-content-container {
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+            top: 30%;
+            position: relative;
+        }
+
+        .artist-name {
+            font-size: 56px;
+            font-weight: normal;
+            margin: 0 0 0.75em 0;
+        }
+
+        .album-title {
+            font-weight: 200;
+            font-size: 48px;
+            margin: 0 0 1.75em 0;
+        }
+
+        .song-title {
+            font-size: 36px;
+            font-weight: 200;
+            margin: 0 0 1.5em 0;
+        }
+
+        .album {
+            box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.65);
+            height: 472.5px;
+            /*height: 630px;*/
+            margin-left: 450px;
+            margin-top: 40px;
+            position: relative;
+            width: 472.5px;
+            /*width: 630px;*/
+            z-index: 10;
+        }
+
+        .album-art {
+            background: #fff url("../resources/img/cover.png") center/cover no-repeat;
+            height: 472.5px;
+            position: relative;
+            width: 472.5px;
+            z-index: 10;
+        }
+
+        .vinyl {
+            -webkit-animation: spin 2s linear infinite;
+            -moz-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite;
+            -webkit-transition: all 500ms;
+            -moz-transition: all 500ms;
+            transition: all 500ms;
+            background-image: url("https://repo.bfw.wiki/bfwrepo/images/music/changpian/vinyl.png"), url("../resources/img/cover.png");
+            background-position: center, center;
+            background-size: cover, 40% auto;
+            background-repeat: no-repeat;
+            border-radius: 100%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+            height: 450px;
+            /*height: 600px;*/
+            left: 0;
+            position: absolute;
+            top: 10px;
+            width: 450px;
+            /*width: 600px;*/
+            z-index: 5;
+            will-change: transform, left;
+        }
+
+        .is-playing .vinyl {
+            left: 52%;
+        }
+
+        .is-pausing .vinyl {
+            left: 0;
+        }
+
+        .music-player-controls {
+            text-align: center;
+        }
+
+        [class^=control-] {
+            -webkit-filter: brightness(95%);
+            filter: brightness(95%);
+            border-radius: 100%;
+            display: inline-block;
+            height: 44px;
+            margin: 0 3px;
+            width: 44px;
+        }
+
+        [class^=control-]:hover {
+            -webkit-filter: brightness(85%);
+            filter: brightness(85%);
+            cursor: pointer;
+        }
+
+        .control-play {
+            background: transparent url("https://repo.bfw.wiki/bfwrepo/images/music/changpian/play.svg") center/cover no-repeat;
+        }
+
+        .is-playing .control-play {
+            background: transparent url("https://repo.bfw.wiki/bfwrepo/images/music/changpian/pause.svg") center/cover no-repeat;
+        }
+
+        @-webkit-keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        @-moz-keyframes spin {
+            0% {
+                -moz-transform: rotate(0deg);
+            }
+            100% {
+                -moz-transform: rotate(360deg);
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+                -moz-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                -o-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        .lyric {
+            width: 340px;
+            height: 55%;
+            /*margin:0 auto;*/
+            top: 25%;
+            overflow: hidden;
+        }
+
+        ul {
+            transition-duration: 600ms;
+        }
+
+        ul, li {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li.on {
+            color: #fff;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        p {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            height: 18px;
+            line-height: 18px;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+            text-align: center;
+            margin-top: 16px;
+            margin-bottom: 16px;
+            font-size: 19px;
+        }
+    </style>
+    <title>Tang's Music</title>
+
+</head>
+
+<body>
+<!-- partial:index.partial.html -->
+<div class="music-player-container is-pausing">
+
+    <div class="music-player">
+        <div class="player-content-container">
+
+            <div class="lyric" style="float:left;position:absolute;width:auto;margin-top: 66px;margin-left:-3.5rem">
+                <ul id="lrclist" style="transform: translateY(0px);width:500px"></ul>
+            </div>
+
+            <audio id="audio" src="../resources/music/music.flac" controls="controls"
+                   style="position: relative;width:90%;margin-top: 40rem;margin-right: 15rem"></audio>
+            <!--  /.song-progress -->
+            <div class="music-player-controls">
+<!--                <div class="control-play"></div>-->
+                <!--  /.control-play -->
+            </div>
+            <!--  /.music-player-controls -->
+        </div>
+        <!--  /.player-content-container -->
+    </div>
+    <!--  /.music-player -->
+
+    <div class="album">
+        <div class="album-art"></div>
+        <!--  /.album-art -->
+        <div class="vinyl"></div>
+        <!--  /.vinyl -->
+    </div>
+    
+
+
+
+</div>
+<div><a href="https://tang5618.com"><img src="../resources/img/qt.png" style="position: absolute;right:5%;top:5%;width: 5%"></a></div>
+
+<div><img src="../resources/img/tang.gif" style="position: absolute;right:13%;bottom:8%;width: 8%;border-radius:25%;"></div>
+<div style="position: absolute;right:16%;bottom:3%;font-weight: bolder"><p style="line-height: 15px">Tang</p></div>
+
+<div><img src="../resources/img/yolk.gif" style="position: absolute;right:5%;bottom:7.5%;width: 8%;border-radius:25%;"></div>
+<div style="position: absolute;right:8%;bottom:3%;font-weight: bolder"><p style="line-height: 15px">Yolk</p></div>
+
+<script type="text/javascript" src="https://repo.bfw.wiki/bfwrepo/js/jquery-3.2.1.min.js"></script>
+
+<script>
+    var audio = document.querySelector('audio');
+    audio.addEventListener('play', function() { /* do something */
+        $('.music-player-container').toggleClass('is-playing');
+        $('.music-player-container').toggleClass('is-pausing');
+    })
+    audio.addEventListener('pause', function() { /* do something */
+        $('.music-player-container').toggleClass('is-pausing');
+        $('.music-player-container').toggleClass('is-playing');
+    })
+
+
+
+</script>
+<script>
+    var lrcJSON = {
+        "[00:00.00]":"The Impossible Dream(The Quest)",
+        "[00:07.06]":"To dream the impossible dream",
+        "[00:12.14]":"",
+        "[00:13.34]":"To fight the unbeatable foe",
+        "[00:18.47]":"",
+        "[00:20.26]":"To bear with unbearable sorrow",
+        "[00:26.60]":"To run where the brave dare not go ",
+        "[00:33.10]":"To right the unrightable wrong",
+        "[00:39.65]":"To love pure and chaste from afar",
+        "[00:46.42]":"To try when your arms are too weary",
+        "[00:52.92]":"To reach the unreachable star",
+        "[00:58.90]":"This is my quest  to follow that star ",
+        "[01:05.26]":"No matter how hopeless ",
+        "[01:08.22]":"No matter how far",
+        "[01:11.66]":"To fight for the right",
+        "[01:14.78]":"Without question or pause",
+        "[01:18.17]":"To be willing to march",
+        "[01:20.63]":"Into hell for heavenly cause",
+        "[01:25.75]":"And I know if I&apos;ll only be true to",
+        "[01:31.23]":"This glorious quest",
+        "[01:35.68]":"That my heart will lie peaceful and calm",
+        "[01:39.28]":"",
+        "[01:41.14]":"When I&apos;m laid to my rest",
+        "[01:46.16]":"And the world will be better for this",
+        "[01:52.85]":"That one man",
+        "[01:54.68]":"Scorned and covered with scars",
+        "[01:59.67]":"Still strove with his last ounce of courage",
+        "[02:05.68]":"",
+        "[02:06.38]":"To reach the unreachable star",
+        "[02:13.41]":"This is my quest  to follow that star ",
+        "[02:19.84]":"No matter how hopeless ",
+        "[02:22.77]":"No matter how far",
+        "[02:26.07]":"To fight for the right",
+        "[02:28.98]":"Without question or pause",
+        "[02:32.13]":"To be willing to march",
+        "[02:34.35]":"Into hell for heavenly cause",
+        "[02:39.87]":"And I know if I&apos;ll only be true to",
+        "[02:45.36]":"This glorious quest",
+        "[02:49.43]":"That my heart will lie peaceful and calm",
+        "[02:54.75]":"When I&apos;m laid to my rest",
+        "[03:01.06]":"And the world will be better for this",
+        "[03:10.27]":"That one man",
+        "[03:12.44]":"Scorned and covered with scars",
+        "[03:17.15]":"Still strove with his last ounce of courage",
+        "[03:24.33]":"To reach the unreachable star",
+    };
+
+
+    var lrcTime = [];//歌词对应的时间数组
+    var ul = $("#lrclist")[0];//获取ul
+
+    var i = 0;
+    $.each(lrcJSON, function (key, value) {//遍历lrc
+        lrcTime[i++] = parseFloat(key.substr(1, 3)) * 60 + parseFloat(key.substring(4, 10));//00:00.000转化为00.000格式
+        ul.innerHTML += "<li><p>" + lrcJSON[key] + "</p></li>";//ul里填充歌词
+    });
+    lrcTime[lrcTime.length] = lrcTime[lrcTime.length - 1] + 3;//如不另加一个结束时间，到最后歌词滚动不到最后一句
+
+
+    var $li = $("#lrclist>li");//获取所有li
+    var isLocked = false;//当拖动进度条的时候锁定，防止拖动进度条时audio时间改变出现冲突
+    var currentLine = 0;//当前播放到哪一句了
+    var currentTime;//当前播放的时间
+    var audio = document.getElementById("audio");
+    var ppxx;//保存ul的translateY值
+
+    audio.ontimeupdate = function () {//audio时间改变事件
+        if (isLocked === false) {
+            isLocked = true;
+            currentTime = audio.currentTime;
+            for (n = -8, len = lrcTime.length; n <= 8; n++) {//将可视部分的所有其他歌词设置为默认
+                if (currentLine + n < len - 1) {
+                    $li.get(currentLine + n).className = "";
+                    console.log(" clear" + currentLine + n);
+
+                } else break;
+            }
+
+            for (j = 0, len = lrcTime.length; j < len; j++) {
+
+                if (currentTime <= lrcTime[j + 1] && currentTime >= lrcTime[j]) {
+                    currentLine = j;
+                    ppxx = 150 - (currentLine * 32);
+                    ul.style.transform = "translateY(" + ppxx + "px)";
+
+                    $li.get(currentLine - 1).className = "";
+                    console.log("on" + currentLine);
+                    $li.get(currentLine).className = "on";
+                    break;
+                }
+            }
+            isLocked = false;
+        }
+
+    };
+
+
+</script>
+
+</body>
+
+</html>

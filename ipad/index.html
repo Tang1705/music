@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tang's Music</title>
+    <link rel="stylesheet" type="text/css" href="../resources/css/style-ipad.css">
+    <link rel="stylesheet" type="text/css" href="../resources/css/avater-ipad.css">
+    <script type="text/javascript" src="https://unpkg.com/wavesurfer.js"></script>
+    <script type="text/javascript" src="https://repo.bfw.wiki/bfwrepo/js/jquery-3.2.1.min.js"></script>
+
+</head>
+<body>
+<div id="right-top"></div>
+<div id="left-top"></div>
+<div id="left-bottom"></div>
+<div id="right-bottom"></div>
+
+<div><a href="https://tang5618.com"><img src="../resources/img/qt.png"
+                                         style="position: absolute;right:5%;top:5%;width: 5%" alt="qt"></a></div>
+
+<div class="tang"></div>
+<div class="circle" style="position: absolute;bottom: 8%;right: 13.5%;"></div>
+<div><img src="../resources/img/tang-ps.gif" style="position: absolute;right:13%;bottom:8%;width: 8%;border-radius:25%;"></div>
+<div style="position: absolute;right:15.5%;bottom:1.5%;font-weight: bolder"><p style="line-height: 15px;color: black">Tang</p></div>
+
+<div class="yolk"></div>
+<div class="circle" style="position: absolute;bottom: 7%;right: 4.5%;"></div>
+<div><img src="../resources/img/yolk-ps.gif" style="position: absolute;right:4.4%;bottom:7.5%;width: 8%;border-radius:25%;"></div>
+<div style="position: absolute;right:6.5%;bottom:1.5%;font-weight: bolder"><p style="line-height: 15px;color: black">Yolk</p></div>
+
+<div class="music-player-container is-pausing">
+    <img src="../resources/assets/icon.svg"
+         style="position: absolute;width: 2.5rem;z-index: 55;margin-top: 1.5rem;margin-left: 3rem">
+    <div style="position: absolute; z-index: 55;font-weight: bolder;font-size: 22px;margin-top: 1.7rem;margin-left: 35rem">
+        <p style="color: #515044">春歌</p>
+    </div>
+    <div id="top"></div>
+    <div id="bottom"></div>
+    <div id="circle"></div>
+    <div id="disk"></div>
+    <div id="manner"></div>
+    <div id="corner"></div>
+    <div id="corner-right"></div>
+    <div id="high"></div>
+    <div id="low"></div>
+
+
+    <div class="progress-bar">
+        <div class="music">
+            <div class="info">
+                <div class="controls">
+                    <img src="../resources/assets/play.svg" id="playBtn" alt="">
+                    <img src="../resources/assets/stop.svg" id="stopBtn" alt="">
+                    <img src="../resources/assets/volume.svg" id="volumeBtn" alt="">
+                </div>
+                <div id="waveform"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lyric" style="float:left;position:absolute;width:auto;margin-left:0;z-index: 60">
+        <ul id="lrclist" style="transform: translateY(0px);width:375px"></ul>
+    </div>
+
+    <div id="current-time"></div>
+
+    <div class="music-player">
+        <div class="player-content-container">
+
+        </div>
+    </div>
+
+    <div class="album">
+        <div class="vinyl"></div>
+    </div>
+
+
+</div>
+
+<script>
+    var playBtn = document.getElementById('playBtn');
+    var stopBtn = document.getElementById('stopBtn');
+    var volumeBtn = document.getElementById('volumeBtn');
+
+    var wavesurfer = WaveSurfer.create({
+        container: '#waveform',
+        // waveColor: 'aqua',
+        progressColor: '#4D59F5',
+        barWidth: 3,
+        height: 50,
+        responsive: true,
+        hideScrollbar: true,
+        // barRadius: 5,
+    });
+    wavesurfer.load('../resources/music/music.flac');
+
+    playBtn.onclick = function () {
+        wavesurfer.playPause();
+        if (playBtn.src.includes("play.svg")) {
+            playBtn.src = "../resources/assets/pause.svg";
+            $('.music-player-container').toggleClass('is-playing');
+            $('.music-player-container').toggleClass('is-pausing');
+        } else {
+            playBtn.src = "../resources/assets/play.svg";
+            $('.music-player-container').toggleClass('is-pausing');
+            $('.music-player-container').toggleClass('is-playing');
+        }
+    }
+
+    stopBtn.onclick = function () {
+        wavesurfer.stop();
+        playBtn.src = "../resources/assets/play.svg";
+        $('.music-player-container').toggleClass('is-pausing');
+        $('.music-player-container').toggleClass('is-playing');
+    }
+
+    volumeBtn.onclick = function () {
+        wavesurfer.toggleMute();
+        if (volumeBtn.src.includes("volume.svg")) {
+            volumeBtn.src = "../resources/assets/mute.svg";
+        } else {
+            volumeBtn.src = "../resources/assets/volume.svg";
+        }
+    }
+
+    wavesurfer.on('finish', function () {
+        playBtn.src = "../resources/assets/play.svg";
+        wavesurfer.stop();
+        $('.music-player-container').toggleClass('is-pausing');
+        $('.music-player-container').toggleClass('is-playing');
+    });
+
+
+    var lrcJSON = {
+        "[00:00.00]": "春歌 - 何训田",
+        "[00:01.52]": "春有百花秋有月",
+        "[00:08.02]": "夏有凉风冬有雪",
+        "[00:15.08]": "若无闲事挂心头",
+        "[00:21.96]": "便是人间好时节 ",
+        "[00:28.83]": "春有百花秋有月",
+        "[00:35.46]": "夏有凉风冬有雪",
+        "[00:42.45]": "若无闲事挂心头",
+        "[00:49.40]": "便是人间好时节 ",
+        "[00:56.20]": "春有百花秋有月",
+        "[01:02.83]": "夏有凉风冬有雪",
+        "[01:09.70]": "若无闲事挂心头",
+        "[01:16.58]": "便是人间好时节 ",
+        "[01:23.58]": "春有百花秋有月",
+        "[01:30.34]": "夏有凉风冬有雪",
+        "[01:37.33]": "若无闲事挂心头",
+        "[01:44.02]": "便是人间好时节 ",
+        "[01:51.02]": "春有百花秋有月",
+        "[01:57.84]": "夏有凉风冬有雪",
+        "[02:04.40]": "若无闲事挂心头",
+        "[02:11.40]": "便是人间好时节 ",
+        "[02:18.40]": "春有百花秋有月",
+        "[02:25.15]": "夏有凉风冬有雪",
+        "[02:31.90]": "若无闲事挂心头",
+        "[02:39.28]": "便是人间好时节 ",
+        "[02:45.90]": "春有百花秋有月",
+        "[02:52.47]": "夏有凉风冬有雪",
+        "[02:59.27]": "若无闲事挂心头",
+        "[03:06.15]": "便是人间好时节 ",
+        "[03:13.22]": "春有百花秋有月",
+        "[03:19.97]": "夏有凉风冬有雪",
+        "[03:26.84]": "若无闲事挂心头",
+        "[03:33.78]": "便是人间好时节",
+    };
+
+
+    var lrcTime = [];//歌词对应的时间数组
+    var ul = $("#lrclist")[0];//获取ul
+
+    var i = 0;
+    $.each(lrcJSON, function (key, value) {//遍历lrc
+        lrcTime[i++] = parseFloat(key.substr(1, 3)) * 60 + parseFloat(key.substring(4, 10));//00:00.000转化为00.000格式
+        ul.innerHTML += "<li><p>" + lrcJSON[key] + "</p></li>";//ul里填充歌词
+    });
+    lrcTime[lrcTime.length] = lrcTime[lrcTime.length - 1] + 3;//如不另加一个结束时间，到最后歌词滚动不到最后一句
+
+
+    var $li = $("#lrclist>li");//获取所有li
+    var isLocked = false;
+    var currentLine = 0;//当前播放到哪一句了
+    var currentTime;//当前播放的时间
+    var ppxx;//保存ul的translateY值
+    // var current = document.getElementById("current-time")
+
+    wavesurfer.on("audioprocess", () => {
+        // wavesurfer.ontimeupdate = function () {
+        if (isLocked === false) {
+            isLocked = true;
+            currentTime = wavesurfer.getCurrentTime();
+            for (n = -8, len = lrcTime.length; n <= 8; n++) {//将可视部分的所有其他歌词设置为默认
+                if (currentLine + n < len - 1) {
+                    $li.get(currentLine + n).className = "";
+
+                } else break;
+            }
+
+            for (j = 0, len = lrcTime.length; j < len; j++) {
+
+                if (currentTime <= lrcTime[j + 1] && currentTime >= lrcTime[j]) {
+                    currentLine = j;
+                    ppxx = 100 - (currentLine * 62);
+                    ul.style.transform = "translateY(" + ppxx + "px)";
+
+                    $li.get(currentLine - 1).className = "";
+                    $li.get(currentLine).className = "on";
+                    break;
+                }
+            }
+
+            // current.innerHTML = "<p style='color: white'>" + currentTime.toFixed(2) + "</p>"
+            isLocked = false;
+        }
+
+    });
+
+</script>
+
+<script type="text/javascript">
+    window.onload = function () {
+        window.requestAnimationFrame(getDate)
+    }
+
+    function getDate() {
+        window.setTimeout(function () {
+            window.requestAnimationFrame(getDate)
+        }, 1000 / 2)
+        var d = new Date();
+        var year = d.getFullYear()  //获取年
+        var month = d.getMonth() + 1;  //获取月，从 Date 对象返回月份 (0 ~ 11)，故在此处+1
+        var days = d.getDate() //获取日期
+        if (month < 10) month = "0" + month
+        if (days < 10) days = "0" + days
+
+        var months = new Array("Jan.", "Feb.", "Mar.", "Apr.", "May", "Jun", "Jul", "Aug", "Sept.", "Oct.", "Nov.", "Dec.")
+        var Tools = document.getElementById("corner-right")
+        var da = months[month - 1] + " " + days + " " + year
+        // var da = year + " 年 " + month + " 月 " + days + " 日 "
+        Tools.innerHTML = "<p style='color: black;font-size: 7pt;position: absolute;margin-top: 2rem;font-weight: bolder;'>" + da + "</p>"
+    }
+</script>
+
+</body>
+</html>
