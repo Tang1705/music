@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1a644fe-7611-4672-87b9-69263dacac3f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ipad/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ipad/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +62,7 @@
       <option name="presentableId" value="Default" />
       <updated>1647494266063</updated>
       <workItem from="1647494267281" duration="2952000" />
-      <workItem from="1647501948549" duration="603000" />
+      <workItem from="1647501948549" duration="1187000" />
     </task>
     <servers />
   </component>
