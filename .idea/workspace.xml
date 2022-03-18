@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c481e76b-1971-4521-93aa-2371f93f9c9c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/style.css" afterDir="false" />
-    </list>
+    <list default="true" id="c481e76b-1971-4521-93aa-2371f93f9c9c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,11 +44,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/font" />
       <recent name="$PROJECT_DIR$/resources/music" />
       <recent name="$PROJECT_DIR$/resources/css" />
       <recent name="$PROJECT_DIR$/resources/img" />
       <recent name="$PROJECT_DIR$/v1" />
-      <recent name="$PROJECT_DIR$/resources/assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/v1" />
@@ -82,7 +79,7 @@
       <workItem from="1647395731934" duration="632000" />
       <workItem from="1647401237155" duration="38426000" />
       <workItem from="1647487926730" duration="8584000" />
-      <workItem from="1647591181011" duration="1338000" />
+      <workItem from="1647591181011" duration="1719000" />
     </task>
     <servers />
   </component>
