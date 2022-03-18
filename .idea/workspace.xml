@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1a644fe-7611-4672-87b9-69263dacac3f" name="Changes" comment="">
+    <list default="true" id="c481e76b-1971-4521-93aa-2371f93f9c9c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ipad/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ipad/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/music/music.flac" beforeDir="false" afterPath="$PROJECT_DIR$/resources/music/music.flac" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +29,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="26V27KtzyDbCBhYgvIIDcMHabdQ" />
+  <component name="ProjectId" id="262AYXiRb1ueGZp6Z2AYbC45EWS" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -36,7 +39,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/music" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -46,23 +49,41 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/resources/css" />
       <recent name="$PROJECT_DIR$/resources/music" />
-      <recent name="$PROJECT_DIR$/resources/assets" />
+      <recent name="$PROJECT_DIR$/resources/css" />
       <recent name="$PROJECT_DIR$/resources/img" />
+      <recent name="$PROJECT_DIR$/v1" />
+      <recent name="$PROJECT_DIR$/resources/assets" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/v1" />
+      <recent name="$PROJECT_DIR$/resources/music" />
+      <recent name="$PROJECT_DIR$/resources/music/music.flac" />
+      <recent name="$PROJECT_DIR$/resources" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a1a644fe-7611-4672-87b9-69263dacac3f" name="Changes" comment="" />
-      <created>1647494266063</created>
+      <changelist id="c481e76b-1971-4521-93aa-2371f93f9c9c" name="Changes" comment="" />
+      <created>1646611358618</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1647494266063</updated>
-      <workItem from="1647494267281" duration="2952000" />
-      <workItem from="1647501948549" duration="1187000" />
+      <updated>1646611358618</updated>
+      <workItem from="1646611359889" duration="22187000" />
+      <workItem from="1646666279776" duration="1927000" />
+      <workItem from="1646729363678" duration="9798000" />
+      <workItem from="1646899577916" duration="567000" />
+      <workItem from="1646929005842" duration="352000" />
+      <workItem from="1646929472754" duration="465000" />
+      <workItem from="1646930141458" duration="1254000" />
+      <workItem from="1646969024735" duration="49000" />
+      <workItem from="1647045680893" duration="2595000" />
+      <workItem from="1647307277878" duration="2426000" />
+      <workItem from="1647395731934" duration="632000" />
+      <workItem from="1647401237155" duration="38426000" />
+      <workItem from="1647487926730" duration="8584000" />
     </task>
     <servers />
   </component>
