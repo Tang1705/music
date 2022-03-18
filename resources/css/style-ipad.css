@@ -4,11 +4,16 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: adobe;
+    src: url("../font/SourceHanSerifCN-VF.ttf");
+
+}
+
 body {
     background-color: #fffdfd;
     color: #515044;
-    font-family: "Raleway", sans-serif;
-    /*font-size: 18px;*/
+    font-family: "adobe", "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 #right-top {

@@ -4,11 +4,16 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: adobe;
+    src: url("../font/SourceHanSerifCN-VF.ttf");
+
+}
+
 body {
     background-color: #fffdfd;
     color: #515044;
-    font-family: "Raleway", sans-serif;
-    /*font-size: 18px;*/
+    font-family: "adobe", "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 #right-top {
@@ -262,8 +267,8 @@ ul, li {
 }
 
 li.on {
-    background-color: rgba(91,120,206,.8);
-    border-radius:25px;
+    background-color: rgba(91, 120, 206, .8);
+    border-radius: 25px;
     color: #ffffff;
     font-weight: bolder;
     letter-spacing: 2px;
@@ -341,7 +346,7 @@ p {
     z-index: 30;
 }
 
-#high{
+#high {
     position: absolute;
     background: url("../assets/gaoyin1.svg") center/cover no-repeat;
     background-size: 88%;
@@ -366,7 +371,7 @@ p {
     z-index: 30;
 }
 
-#low{
+#low {
     position: absolute;
     background: url("../assets/diyin1.svg") center/cover no-repeat;
     background-size: 85%;
@@ -442,7 +447,7 @@ p {
     z-index: 50;
 }
 
-#current-time{
+#current-time {
     position: absolute;
     z-index: 65;
     left: 37%;
