@@ -111,9 +111,11 @@
 
     stopBtn.onclick = function () {
         wavesurfer.stop();
-        playBtn.src = "../resources/assets/play.svg";
-        $('.music-player-container').toggleClass('is-pausing');
-        $('.music-player-container').toggleClass('is-playing');
+        if (!playBtn.src.includes("play.svg")){
+            $('.music-player-container').toggleClass('is-pausing');
+            $('.music-player-container').toggleClass('is-playing');
+            playBtn.src = "./resources/assets/play.svg";
+        }
     }
 
     volumeBtn.onclick = function () {
