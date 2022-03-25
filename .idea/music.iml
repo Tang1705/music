@@ -8,5 +8,12 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="autoload" level="application" />
+    <orderEntry type="library" name="promise-polyfill" level="application" />
+    <orderEntry type="library" name="howler" level="application" />
+    <orderEntry type="library" name="pixi.js" level="application" />
+    <orderEntry type="library" name="live2dcubismcore" level="application" />
+    <orderEntry type="library" name="live2dv3" level="application" />
+    <orderEntry type="library" name="core-js-bundle" level="application" />
   </component>
 </module>
