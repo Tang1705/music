@@ -39,6 +39,27 @@ body {
     top: 0;
 }
 
+#left-top p {
+    /*color: lightgray;*/
+    font-size: 220pt;
+    font-weight: bolder;
+    height: 80%;
+    padding-top: 18rem;
+    padding-left: 3.5rem;
+    color: rgba(0, 0, 0, .07);
+    /*z-index: 1;*/
+    position: absolute;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
+    text-transform: uppercase;
+}
+
 #left-bottom {
     /*background-color: #F8E7A3;*/
     position: absolute;
@@ -272,8 +293,8 @@ ul, li {
 }
 
 li.on {
-    background-color: rgba(91,120,206,.8);
-    border-radius:25px;
+    background-color: rgba(91, 120, 206, .8);
+    border-radius: 25px;
     color: #ffffff;
     font-weight: bolder;
     letter-spacing: 2px;
@@ -351,7 +372,7 @@ p {
     z-index: 30;
 }
 
-#high{
+#high {
     position: absolute;
     background: url("../assets/gaoyin1.svg") center/cover no-repeat;
     background-size: 90%;
@@ -376,7 +397,7 @@ p {
     z-index: 30;
 }
 
-#low{
+#low {
     position: absolute;
     background: url("../assets/diyin1.svg") center/cover no-repeat;
     background-size: 75%;
@@ -452,7 +473,7 @@ p {
     z-index: 50;
 }
 
-#current-time{
+#current-time {
     position: absolute;
     z-index: 65;
     left: 37%;
