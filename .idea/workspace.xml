@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c481e76b-1971-4521-93aa-2371f93f9c9c" name="Changes" comment="Changes" />
+    <list default="true" id="c481e76b-1971-4521-93aa-2371f93f9c9c" name="Changes" comment="Changes">
+      <change beforePath="$PROJECT_DIR$/resources/css/style-ipad.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/style-ipad.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -97,7 +99,7 @@
       <workItem from="1649409843543" duration="395000" />
       <workItem from="1649410250724" duration="35000" />
       <workItem from="1649410294804" duration="839000" />
-      <workItem from="1649411232826" duration="2107000" />
+      <workItem from="1649411232826" duration="2519000" />
     </task>
     <servers />
   </component>
