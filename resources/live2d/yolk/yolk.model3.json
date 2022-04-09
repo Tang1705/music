@@ -1,0 +1,18 @@
+{
+	"Version": 3,
+	"FileReferences": {
+		"Moc": "yolk.moc3",
+		"Textures": [
+			"yolk.1024/texture_00.png"
+		],
+		"DisplayInfo": "yolk.cdi3.json",
+		"Motions": {
+			"Idle": [
+				{
+					"File": "yolk.motion3.json"
+				}
+			]
+		}
+	},
+	"HitAreas": []
+}
