@@ -7,9 +7,9 @@
     <link rel="icon" href="./bit_favicon.ico">
     <link rel="stylesheet" type="text/css" href="./resources/css/style.css">
     <link rel="stylesheet" type="text/css" href="./resources/css/avater.css">
+    <link rel="stylesheet" type="text/css" href="https://open.lujiawei.com/web/msgsk/1/messages.css">
     <script type="text/javascript" src="https://unpkg.com/wavesurfer.js"></script>
     <script type="text/javascript" src="https://repo.bfw.wiki/bfwrepo/js/jquery-3.2.1.min.js"></script>
-
 </head>
 <body>
 <div id="right-top"></div>
@@ -22,7 +22,8 @@
 
 <div class="tang"></div>
 <div class="circle" style="position: absolute;bottom: 8%;right: 11.8%;"></div>
-<iframe src="./tang.html" frameborder=0 style="position: absolute;right: 11.5%;bottom: 5%;z-index: 99;height: 200rem"></iframe>
+<iframe src="./tang.html" frameborder=0
+        style="position: absolute;right: 11.6%;bottom: 5%;z-index: 99;height: 200rem"></iframe>
 <!--<div><img src="resources/img/tang-ps.gif" style="position: absolute;right:12%;bottom:8%;width: 5%;border-radius:25%;"-->
 <!--          alt="">-->
 <!--</div>-->
@@ -30,17 +31,22 @@
 
 <div class="yolk"></div>
 <div class="circle" style="position: absolute;bottom: 7%;right: 4.8%;"></div>
-<iframe src="./yolk.html" frameborder=0 style="position: absolute;right: 4%;bottom: 5%;z-index: 99;height: 200rem"></iframe>
+<iframe src="./yolk.html" frameborder=0
+        style="position: absolute;right: 4%;bottom: 5%;z-index: 99;height: 200rem"></iframe>
 <!--<div><img src="resources/img/yolk-ps.gif" style="position: absolute;right:5%;bottom:7.5%;width: 5%;border-radius:25%;" alt="">-->
 <!--</div>-->
 <div style="position: absolute;right:6.5%;bottom:1.8%;font-weight: bolder"><p style="color: black">Yolk</p></div>
 
 <div class="music-player-container is-pausing">
-    <img src="./resources/assets/vip.svg"
-         style="position: absolute;width: 2.5rem;z-index: 55;margin-top: 2.5rem;margin-left: 3rem">
-    <div style="position: absolute; z-index: 55;font-weight: bolder;font-size: 24px;margin-top: 1.7rem;right:35%">
-        <p style="color: #515044">青春未散场</p>
-    </div>
+    <!--    <img src="./resources/assets/vip.svg"-->
+    <!--         style="position: absolute;width: 2.5rem;z-index: 55;margin-top: 2.5rem;margin-left: 3rem">-->
+    <!--    <div style="position: absolute; z-index: 55;font-weight: bolder;font-size: 24px;margin-top: 1.7rem;right:35%">-->
+    <!--        <p style="color: #515044">青春未散场</p>-->
+    <!--    </div>-->
+
+    <div class="scene"><img src="./resources/video/scene.mp4" alt=""></div>
+    <div class="mask"></div>
+
     <div id="top"></div>
     <div id="bottom"></div>
     <div id="circle"></div>
@@ -66,6 +72,7 @@
     </div>
 
     <div class="lyric" style="float:left;position:absolute;width:auto;margin-left:0;z-index: 60">
+        <div id="timestamp" class="timestamp" style="z-index: 20;font-weight: bolder;"></div>
         <ul id="lrclist" style="transform: translateY(0px);width:500px"></ul>
     </div>
 
@@ -89,6 +96,8 @@
     var stopBtn = document.getElementById('stopBtn');
     var volumeBtn = document.getElementById('volumeBtn');
 
+    var timestamp = document.getElementById("timestamp")
+
     var wavesurfer = WaveSurfer.create({
         container: '#waveform',
         // waveColor: 'aqua',
@@ -103,6 +112,7 @@
     wavesurfer.load('./resources/music/music.flac');
 
     playBtn.onclick = function () {
+        timestamp.innerHTML = "<p style=\"color: white;\">上午9:41</p>"
         wavesurfer.playPause();
         if (playBtn.src.includes("play.svg")) {
             playBtn.src = "./resources/assets/pause.svg";
@@ -117,7 +127,7 @@
 
     stopBtn.onclick = function () {
         wavesurfer.stop();
-        if (!playBtn.src.includes("play.svg")){
+        if (!playBtn.src.includes("play.svg")) {
             $('.music-player-container').toggleClass('is-pausing');
             $('.music-player-container').toggleClass('is-playing');
             playBtn.src = "./resources/assets/play.svg";
@@ -142,80 +152,76 @@
 
 
     var lrcJSON = {
-        "[00:00.00]":"青春未散场",
-        "[00:00.14]":"演唱：Xun",
-        "[00:00.28]":"词 Lyricist：耕耕",
-        "[00:00.56]":"曲 Composer：Xun（易硕成）",
-        "[00:00.84]":"编曲 Arrangement：星弟",
-        "[00:01.12]":"制作人 Producer：Xun",
-        "[00:01.40]":"配唱制作人 Vocal Producer：Xun",
-        "[00:01.68]":"吉他 Guitars：Tommy Wu",
-        "[00:01.96]":"贝斯 Bass：苏虹文",
-        "[00:02.24]":"和声编写 Backing Vocal Arrangement：Xun",
-        "[00:02.52]":"和声 Backing Vocal：Xun",
-        "[00:02.80]":"录音工程师 Recording Engineer：张海庚/Xun",
-        "[00:03.08]":"录音工作室 Recording Studio：Hot Music Studio",
-        "[00:03.36]":"音频编辑 Audio Editing：张海庚/Xun",
-        "[00:03.64]":"混音工程师 Mixing Engineer：赵靖@SBMS Beijing",
-        "[00:03.92]":"混音工作室 Mixing Studio：SpeedBumps Music Studio Beijing",
-        "[00:04.20]":"母带后期处理工程师 Mastering Engineer：赵靖@SBMS Beijing",
-        "[00:04.48]":"母带后期处理录音室 Mastering Studio：SpeedBumps Music Studio Beijing",
-        "[00:04.76]":"监制 Supervised production：三千",
-        "[00:05.04]":"OP：千和世纪",
-        "[00:08.40]":"放学后五点半",
-        "[00:10.38]":"拳皇的擂台准时出战",
-        "[00:12.52]":"草薙京和八神庵",
-        "[00:14.16]":"说不清对谁更喜欢",
-        "[00:16.15]":"小伙伴都围着我站",
-        "[00:17.83]":"崇拜的眼神都向我看",
-        "[00:19.53]":"我的对手不停地换",
-        "[00:21.02]":"奶奶却叫我回家吃饭",
-        "[00:23.63]":"黑板上画满的海洋",
-        "[00:27.27]":"少年在睡梦中数羊",
-        "[00:30.83]":"先生骂我没理想",
-        "[00:33.87]":"太浪费时光",
-        "[00:38.02]":"短发学姐的模样",
-        "[00:41.35]":"爱耍酷吸引她目光",
-        "[00:44.99]":"变成杰伦的幻想",
-        "[00:47.79]":"是年轻在逞强",
-        "[00:54.46]":"如果真的有小叮当",
-        "[00:57.69]":"让我们倒流时光",
-        "[01:01.72]":"夏天操场哄闹走廊和她的芳香",
-        "[01:08.54]":"也许钢筋丛林生长",
-        "[01:11.76]":"斑驳了变形金刚",
-        "[01:15.73]":"记忆的歌还在唱",
-        "[01:18.80]":"就有青涩的模样 未散场",
-        "[01:37.69]":"每次考试都很悲伤",
-        "[01:41.80]":"通宵不睡觉",
-        "[01:45.06]":"也常常被请家长",
-        "[01:47.87]":"检讨写很长",
-        "[01:51.67]":"学大人的模样",
-        "[01:55.44]":"为兄弟放学别嚣张",
-        "[01:59.05]":"还带稚气的脸庞",
-        "[02:01.95]":"是青春的倔强",
-        "[02:08.64]":"如果可以对神龙许愿望",
-        "[02:12.63]":"再去疯一场",
-        "[02:15.98]":"雨后操场星空围墙借她的肩膀",
-        "[02:22.70]":"也许我们航海的方向",
-        "[02:26.47]":"已挥别海贼王",
-        "[02:30.11]":"记忆的画面还在",
-        "[02:32.85]":"就是青春的模样",
-        "[02:50.96]":"有时回想过往谁都一样",
-        "[02:54.97]":"像醉梦一场",
-        "[02:58.30]":"最年少轻狂的时光",
-        "[03:01.72]":"也包括了成长",
-        "[03:05.15]":"青春如此短暂",
-        "[03:07.28]":"所以我们就该去疯狂",
-        "[03:12.22]":"回忆的片段写成故事",
-        "[03:16.16]":"给自己颁奖 去珍藏",
-        "[03:19.82]":"挥洒汗水的篮球场",
-        "[03:21.77]":"麦迪他是我的榜样",
-        "[03:23.49]":"也拥有灌篮的梦想",
-        "[03:24.97]":"变得像樱木花道一样",
-        "[03:27.09]":"荣誉早已不再重要",
-        "[03:28.66]":"人生多少个三十五秒",
-        "[03:30.44]":"回望夕阳下奔跑的我们",
-        "[03:32.08]":"逝去的青春慢慢谈",
+        "[00:00.00]": "月满",
+        "[00:01.27]": "演唱：猪老三儿/吴遥清",
+        "[00:03.41]": "词：王韵澄",
+        "[00:06.82]": "曲：王韵澄",
+        "[00:10.23]": "编曲：王韵澄",
+        "[00:13.64]": "混音：王韵澄",
+        "[00:17.06]": "制作：王韵澄",
+        "[00:20.47]": "统筹：张志峰",
+        "[00:23.88]": "城市沉陷之间",
+        "[00:26.18]": "繁花若隐若现",
+        "[00:29.33]": "滞留在以前 是落叶的秋天",
+        "[00:35.20]": "日与夜的交接",
+        "[00:37.98]": "相视间竟躲偏",
+        "[00:40.84]": "想起多年前",
+        "[00:42.94]": "而无知的翻越",
+        "[00:45.70]": "尝过了人生的不停不转",
+        "[00:47.46]": "表情不咸不淡",
+        "[00:48.60]": "穿过了尘世的白眼",
+        "[00:49.91]": "褒贬落下亦正亦反",
+        "[00:51.39]": "撑破了穿梭昼夜再不需要光的依赖",
+        "[00:54.10]": "却在每天的复制粘贴里",
+        "[00:55.88]": "对你抑制喜欢",
+        "[00:57.15]": "就想着 一阵的",
+        "[00:58.40]": "一时的 一致的 一直的",
+        "[01:00.59]": "你像降落城市的一只白鹤",
+        "[01:02.99]": "已无生机周围忽然响起一切声音",
+        "[01:05.90]": "仙人抚我顶 结发受长生",
+        "[01:07.79]": "你眼底的这片云",
+        "[01:09.84]": "让我波澜初初起",
+        "[01:12.59]": "风里我的上半句",
+        "[01:15.45]": "都随落叶翻去",
+        "[01:18.44]": "盛满会始乱终弃",
+        "[01:21.15]": "缺角曾烙下过最沉的印记",
+        "[01:25.79]": "心乱都趁秋夜翻过去",
+        "[01:30.05]": "直到有人谈分离",
+        "[01:32.64]": "淌过波澜重重迷",
+        "[01:35.48]": "情深是极昼燃尽",
+        "[01:38.32]": "烧毁我的身形",
+        "[01:41.51]": "弥雾衔开了远近",
+        "[01:44.03]": "斑驳至极成熟的人不幸运",
+        "[01:48.55]": "满月随后便倾泻支离",
+        "[02:07.01]": "纸混着落叶 搅成了一圈",
+        "[02:12.55]": "知晓这一切 成为你之间",
+        "[02:18.08]": "灯烧断了丝线 夜眼红了云月",
+        "[02:23.72]": "思绪抽离间 竟为你而冷却",
+        "[02:31.91]": "谁记得 呼吸间",
+        "[02:32.85]": "城市里面沉默一片",
+        "[02:34.22]": "却变得 翻过几⻚",
+        "[02:35.40]": "固守己念 而后目空一切",
+        "[02:37.14]": "期待你叫醒我并收起我的一成不变",
+        "[02:39.98]": "穿梭人群烟火的街竟然溢出了满月",
+        "[02:42.72]": "却想着 一阵的",
+        "[02:44.00]": "一时的 一致的 一直的",
+        "[02:46.49]": "你像降落心底的一只白鹤",
+        "[02:48.85]": "布满荆棘的手慢慢写起一封⻓信",
+        "[02:51.42]": "天上白玉京 鼓楼十二重",
+        "[02:53.12]": "你眼底的这片云",
+        "[02:55.53]": "让我波澜初初起",
+        "[02:58.32]": "风里我的上半句",
+        "[03:01.13]": "都随落叶翻去",
+        "[03:04.09]": "盛满会始乱终弃",
+        "[03:06.84]": "缺角曾烙下过最沉的印记",
+        "[03:11.49]": "心乱都趁秋夜翻过去",
+        "[03:15.57]": "直到有人谈分离",
+        "[03:18.29]": "淌过波澜重重迷",
+        "[03:21.19]": "情深是极昼燃尽",
+        "[03:24.02]": "烧毁我的身形",
+        "[03:27.06]": "弥雾衔开了远近",
+        "[03:29.72]": "斑驳至极成熟的人不幸运",
+        "[03:34.25]": "满月随后便倾泻支离",
     };
 
 
@@ -238,6 +244,7 @@
     // var current = document.getElementById("current-time")
 
     wavesurfer.on("audioprocess", () => {
+
         // wavesurfer.ontimeupdate = function () {
         if (isLocked === false) {
             isLocked = true;
@@ -253,11 +260,15 @@
 
                 if (currentTime <= lrcTime[j + 1] && currentTime >= lrcTime[j]) {
                     currentLine = j;
-                    ppxx = 160 - (currentLine * 62);
+                    ppxx = 50 - (currentLine * 62);
                     ul.style.transform = "translateY(" + ppxx + "px)";
 
                     $li.get(currentLine - 1).className = "";
-                    $li.get(currentLine).className = "on";
+                    if (currentLine % 2 === 0)
+                        $li.get(currentLine).className = "on bluemsg-last";
+                    else
+                        $li.get(currentLine).className = "on greymsg-last";
+
                     break;
                 }
             }

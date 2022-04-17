@@ -262,13 +262,14 @@ ul, li {
     list-style: none;
     padding-top: 0.3rem;
     margin: 0;
-    color: rgba(0, 0, 0, .3);
+    color: rgba(0, 0, 0, .0);
     font-size: 18px;
 }
 
 li.on {
-    background-color: rgba(91, 120, 206, .8);
-    border-radius: 25px;
+    /*    !*background-color: rgba(91, 120, 206, .8);*!*/
+    /*    background-color: #007aff;*/
+    /*    !*border-radius: 25px;*!*/
     color: #ffffff;
     font-weight: bolder;
     letter-spacing: 2px;
@@ -456,4 +457,24 @@ p {
 
 #waveform {
     margin-top: -2.2rem;
+}
+
+.scene img {
+    position: absolute;
+    height: 740px;
+    width: 838px;
+    z-index: 18;
+}
+
+.mask {
+    background-color: black;
+    position: absolute;
+    height: 740px;
+    width: 838px;
+    opacity: 0.2;
+    z-index: 19;
+}
+
+.timestamp {
+    font-family: JW, "Inter var", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "Microsoft YaHei", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }

@@ -15,5 +15,6 @@
     <orderEntry type="library" name="live2dcubismcore" level="application" />
     <orderEntry type="library" name="live2dv3" level="application" />
     <orderEntry type="library" name="core-js-bundle" level="application" />
+    <orderEntry type="library" name="messages" level="application" />
   </component>
 </module>
