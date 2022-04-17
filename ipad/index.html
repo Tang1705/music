@@ -7,7 +7,7 @@
     <link rel="icon" href="../bit_favicon.ico">
     <link rel="stylesheet" type="text/css" href="../resources/css/style-ipad.css">
     <link rel="stylesheet" type="text/css" href="../resources/css/avater-ipad.css">
-    <link rel="stylesheet" type="text/css" href="https://open.lujiawei.com/web/msgsk/1/messages.css">
+    <!--    <link rel="stylesheet" type="text/css" href="https://open.lujiawei.com/web/msgsk/1/messages.css">-->
     <script type="text/javascript" src="https://unpkg.com/wavesurfer.js"></script>
     <script type="text/javascript" src="https://repo.bfw.wiki/bfwrepo/js/jquery-3.2.1.min.js"></script>
 </head>
@@ -43,7 +43,7 @@
     <!--    <div style="position: absolute; z-index: 55;font-weight: bolder;font-size: 22px;margin-top: 0.9rem;right: 35%">-->
     <!--        <p style="color: #515044">青春未散场</p>-->
     <!--    </div>-->
-<!--    <div class="scene"><img src="../resources/video/scene.mp4" alt=""></div>-->
+<!--        <div class="scene"><img src="../resources/video/scene.mp4" alt=""></div>-->
     <div class="scene"><img src="https://5618.oss-cn-beijing.aliyuncs.com/VIP/scene.mp4" alt=""></div>
     <div class="scene_mask"></div>
 
@@ -72,7 +72,8 @@
     </div>
 
     <div class="lyric" style="float:left;position:absolute;width:auto;margin-left:0;z-index: 60">
-        <div id="timestamp" class="timestamp" style="z-index: 20;font-weight: bolder;position: absolute;left: 50%"></div>
+        <div id="timestamp" class="timestamp"
+             style="z-index: 20;font-weight: bolder;position: absolute;left: 50%;top:5%"></div>
         <ul id="lrclist" style="transform: translateY(0px);width:375px"></ul>
     </div>
 
@@ -128,9 +129,9 @@
     stopBtn.onclick = function () {
         wavesurfer.stop();
         if (!playBtn.src.includes("play.svg")) {
+            playBtn.src = "./resources/assets/play.svg";
             $('.music-player-container').toggleClass('is-pausing');
             $('.music-player-container').toggleClass('is-playing');
-            playBtn.src = "./resources/assets/play.svg";
         }
     }
 
@@ -259,16 +260,20 @@
 
                 if (currentTime <= lrcTime[j + 1] && currentTime >= lrcTime[j]) {
                     currentLine = j;
-                    ppxx = 80 - (currentLine * 62);
+                    ppxx = 90 - (currentLine * 62);
                     ul.style.transform = "translateY(" + ppxx + "px)";
 
                     $li.get(currentLine - 1).className = "";
                     // $li.get(currentLine).className = "on";
 
-                    if (currentLine % 2 === 0)
+                    if (currentLine % 2 === 0) {
+                        $li.get(currentLine - 1).className = "on greymsg-last";
                         $li.get(currentLine).className = "on bluemsg-last";
-                    else
+                    } else {
+                        $li.get(currentLine - 1).className = "on bluemsg-last";
                         $li.get(currentLine).className = "on greymsg-last";
+                    }
+
 
                     break;
                 }

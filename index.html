@@ -7,7 +7,7 @@
     <link rel="icon" href="./bit_favicon.ico">
     <link rel="stylesheet" type="text/css" href="./resources/css/style.css">
     <link rel="stylesheet" type="text/css" href="./resources/css/avater.css">
-    <link rel="stylesheet" type="text/css" href="https://open.lujiawei.com/web/msgsk/1/messages.css">
+<!--    <link rel="stylesheet" type="text/css" href="https://open.lujiawei.com/web/msgsk/1/messages.css">-->
     <script type="text/javascript" src="https://unpkg.com/wavesurfer.js"></script>
     <script type="text/javascript" src="https://repo.bfw.wiki/bfwrepo/js/jquery-3.2.1.min.js"></script>
 </head>
@@ -44,7 +44,8 @@
     <!--        <p style="color: #515044">青春未散场</p>-->
     <!--    </div>-->
 
-    <div class="scene"><img src="./resources/video/scene.mp4" alt=""></div>
+<!--    <div class="scene"><img src="./resources/video/scene.mp4" alt=""></div>-->
+    <div class="scene"><img src="https://5618.oss-cn-beijing.aliyuncs.com/VIP/scene.mp4" alt=""></div>
     <div class="mask"></div>
 
     <div id="top"></div>
@@ -72,7 +73,7 @@
     </div>
 
     <div class="lyric" style="float:left;position:absolute;width:auto;margin-left:0;z-index: 60">
-        <div id="timestamp" class="timestamp" style="z-index: 20;font-weight: bolder;"></div>
+        <div id="timestamp" class="timestamp" style="z-index: 20;font-weight: bolder;position: absolute;left: 50%;top:10%"></div>
         <ul id="lrclist" style="transform: translateY(0px);width:500px"></ul>
     </div>
 
@@ -112,7 +113,7 @@
     wavesurfer.load('./resources/music/music.flac');
 
     playBtn.onclick = function () {
-        timestamp.innerHTML = "<p style=\"color: white;\">上午9:41</p>"
+        timestamp.innerHTML = "<p style=\"color: white;\">上午 9:41</p>"
         wavesurfer.playPause();
         if (playBtn.src.includes("play.svg")) {
             playBtn.src = "./resources/assets/pause.svg";
@@ -260,14 +261,20 @@
 
                 if (currentTime <= lrcTime[j + 1] && currentTime >= lrcTime[j]) {
                     currentLine = j;
-                    ppxx = 50 - (currentLine * 62);
+                    ppxx = 120 - (currentLine * 62);
                     ul.style.transform = "translateY(" + ppxx + "px)";
 
-                    $li.get(currentLine - 1).className = "";
-                    if (currentLine % 2 === 0)
+                    // $li.get(currentLine - 1).className = "";
+
+                    if (currentLine % 2 === 0){
+                        $li.get(currentLine-1).className = "on greymsg-last";
                         $li.get(currentLine).className = "on bluemsg-last";
-                    else
+                    }
+                    else{
+                        $li.get(currentLine-1).className = "on bluemsg-last";
                         $li.get(currentLine).className = "on greymsg-last";
+                    }
+
 
                     break;
                 }
