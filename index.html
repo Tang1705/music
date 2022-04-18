@@ -7,7 +7,7 @@
     <link rel="icon" href="./bit_favicon.ico">
     <link rel="stylesheet" type="text/css" href="./resources/css/style.css">
     <link rel="stylesheet" type="text/css" href="./resources/css/avater.css">
-<!--    <link rel="stylesheet" type="text/css" href="https://open.lujiawei.com/web/msgsk/1/messages.css">-->
+    <!--    <link rel="stylesheet" type="text/css" href="https://open.lujiawei.com/web/msgsk/1/messages.css">-->
     <script type="text/javascript" src="https://unpkg.com/wavesurfer.js"></script>
     <script type="text/javascript" src="https://repo.bfw.wiki/bfwrepo/js/jquery-3.2.1.min.js"></script>
 </head>
@@ -44,8 +44,14 @@
     <!--        <p style="color: #515044">青春未散场</p>-->
     <!--    </div>-->
 
-<!--    <div class="scene"><img src="./resources/video/scene.mp4" alt=""></div>-->
-    <div class="scene"><img src="https://5618.oss-cn-beijing.aliyuncs.com/VIP/scene.mp4" alt=""></div>
+    <!--    <div class="scene"><img src="./resources/video/scene.mp4" alt=""></div>-->
+    <!--    <div class="scene"><img src="https://5618.oss-cn-beijing.aliyuncs.com/VIP/scene.mp4" alt=""></div>-->
+    <div id="scene" class="scene">
+        <video id="videoID" loop="loop">
+            <!--            <source src="/resources/video/scene.mp4" type="video/mp4"/>-->
+            <source src="https://5618.oss-cn-beijing.aliyuncs.com/VIP/scene.mp4" type="video/mp4"/>
+        </video>
+    </div>
     <div class="mask"></div>
 
     <div id="top"></div>
@@ -73,7 +79,8 @@
     </div>
 
     <div class="lyric" style="float:left;position:absolute;width:auto;margin-left:0;z-index: 60">
-        <div id="timestamp" class="timestamp" style="z-index: 20;font-weight: bolder;position: absolute;left: 50%;top:10%"></div>
+        <div id="timestamp" class="timestamp"
+             style="z-index: 20;font-weight: bolder;position: absolute;left: 50%;top:10%"></div>
         <ul id="lrclist" style="transform: translateY(0px);width:500px"></ul>
         <div id="stump"></div>
     </div>
@@ -94,10 +101,23 @@
 </div>
 
 <script>
+    // var explorer = window.navigator.userAgent;
+
+    // var scene = document.getElementById("scene");
+    var bgvideo = document.getElementById("videoID");
+
+    // if (explorer.indexOf("Safari") >= 0) {
+    //     scene.innerHTML = "<video id=\"videoID\" loop=\"loop\">\n" +
+    //         "            <source src=\"/resources/video/scene.mp4\" type=\"video/mp4\"/>\n" +
+    //         "        </video>";
+    //     bgvideo = document.getElementById('videoID');  //获取，函数执行完成后local内存释放
+    // }else {
+    //     scene.innerHTML = "<div class=\"scene\"><img src=\"./resources/video/scene.mp4\" alt=\"\"></div>";
+    // }
+
     var playBtn = document.getElementById('playBtn');
     var stopBtn = document.getElementById('stopBtn');
     var volumeBtn = document.getElementById('volumeBtn');
-
     var timestamp = document.getElementById("timestamp")
 
     var myDate = new Date();
@@ -129,16 +149,24 @@
     wavesurfer.load('./resources/music/music.flac');
 
     playBtn.onclick = function () {
-        timestamp.innerHTML = "<p style=\"color: white;\">"+time+"</p>"
+        timestamp.innerHTML = "<p style=\"color: white;\">" + time + "</p>"
         wavesurfer.playPause();
         if (playBtn.src.includes("play.svg")) {
             playBtn.src = "./resources/assets/pause.svg";
             $('.music-player-container').toggleClass('is-playing');
             $('.music-player-container').toggleClass('is-pausing');
+
+            // if (explorer.indexOf("safari") < 0) {
+                bgvideo.play();
+            // }
         } else {
             playBtn.src = "./resources/assets/play.svg";
             $('.music-player-container').toggleClass('is-pausing');
             $('.music-player-container').toggleClass('is-playing');
+
+            // if (explorer.indexOf("safari") < 0) {
+                bgvideo.pause();
+            // }
         }
 
         stump.innerHTML = "<div id=\"msg5\" class=\"bubble\">\n" +
@@ -292,8 +320,8 @@
                     // $li.get(currentLine - 1).className = "";
 
                     // if (currentLine % 2 === 0){
-                        $li.get(currentLine-1).className = "on greymsg-last";
-                        $li.get(currentLine).className = "on bluemsg-last";
+                    $li.get(currentLine - 1).className = "on greymsg-last";
+                    $li.get(currentLine).className = "on bluemsg-last";
                     // }
                     // else{
                     //     $li.get(currentLine-1).className = "on bluemsg-last";
@@ -312,6 +340,7 @@
     });
 
 </script>
+
 
 <script type="text/javascript">
     window.onload = function () {

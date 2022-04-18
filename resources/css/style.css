@@ -460,6 +460,13 @@ p {
     margin-top: -2.2rem;
 }
 
+.scene video {
+    position: absolute;
+    height: 660px;
+    /*width: 838px;*/
+    z-index: 18;
+}
+
 .scene img {
     position: absolute;
     height: 740px;

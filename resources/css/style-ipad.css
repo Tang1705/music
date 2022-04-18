@@ -496,6 +496,13 @@ p {
     z-index: 18;
 }
 
+.scene video {
+    position: absolute;
+    height: 510px;
+    /*width: 838px;*/
+    z-index: 18;
+}
+
 .scene_mask {
     background-color: black;
     position: absolute;
