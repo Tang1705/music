@@ -43,7 +43,7 @@
     <!--    <div style="position: absolute; z-index: 55;font-weight: bolder;font-size: 22px;margin-top: 0.9rem;right: 35%">-->
     <!--        <p style="color: #515044">青春未散场</p>-->
     <!--    </div>-->
-<!--        <div class="scene"><img src="../resources/video/scene.mp4" alt=""></div>-->
+    <!--    <div class="scene"><img src="../resources/video/scene.mp4" alt=""></div>-->
     <div class="scene"><img src="https://5618.oss-cn-beijing.aliyuncs.com/VIP/scene.mp4" alt=""></div>
     <div class="scene_mask"></div>
 
@@ -75,6 +75,15 @@
         <div id="timestamp" class="timestamp"
              style="z-index: 20;font-weight: bolder;position: absolute;left: 50%;top:5%"></div>
         <ul id="lrclist" style="transform: translateY(0px);width:375px"></ul>
+        <div id="stump"></div>
+        <!--        <div id="msg5" class="bubble">-->
+        <!--            <div class="bubble-1"></div>-->
+        <!--            <div class="dot-1"></div>-->
+        <!--            <div class="dot-2"></div>-->
+        <!--            <div class="dot-3"></div>-->
+        <!--            <div class="bubble-2"></div>-->
+        <!--            <div class="bubble-3"></div>-->
+        <!--        </div>-->
     </div>
 
     <div id="current-time"></div>
@@ -99,6 +108,21 @@
 
     var timestamp = document.getElementById("timestamp")
 
+    var stump = document.getElementById("stump");
+
+    var myDate = new Date();
+    var hour = myDate.getHours();       //获取当前小时数(0-23)
+    var minute = myDate.getMinutes();     //获取当前分钟数(0-59)
+    var morning = "";
+    if (hour < 12) morning = "上午";
+    else {
+        morning = "下午";
+        if (hour > 12)
+            hour -= 12;
+    }
+    var time = morning + " " + hour + ":" + minute;
+
+
     var wavesurfer = WaveSurfer.create({
         container: '#waveform',
         // waveColor: 'aqua',
@@ -113,7 +137,7 @@
     wavesurfer.load('../resources/music/music.flac');
 
     playBtn.onclick = function () {
-        timestamp.innerHTML = "<p style=\"color: white;\">上午9:41</p>"
+        timestamp.innerHTML = "<p style=\"color: white;\">" + time + "</p>"
         wavesurfer.playPause();
         if (playBtn.src.includes("play.svg")) {
             playBtn.src = "../resources/assets/pause.svg";
@@ -124,6 +148,15 @@
             $('.music-player-container').toggleClass('is-pausing');
             $('.music-player-container').toggleClass('is-playing');
         }
+
+        stump.innerHTML = "<div id=\"msg5\" class=\"bubble\">\n" +
+            "            <div class=\"bubble-1\"></div>\n" +
+            "            <div class=\"dot-1\"></div>\n" +
+            "            <div class=\"dot-2\"></div>\n" +
+            "            <div class=\"dot-3\"></div>\n" +
+            "            <div class=\"bubble-2\"></div>\n" +
+            "            <div class=\"bubble-3\"></div>\n" +
+            "        </div>";
     }
 
     stopBtn.onclick = function () {
@@ -260,19 +293,19 @@
 
                 if (currentTime <= lrcTime[j + 1] && currentTime >= lrcTime[j]) {
                     currentLine = j;
-                    ppxx = 90 - (currentLine * 62);
+                    ppxx = 65 - (currentLine * 46);
                     ul.style.transform = "translateY(" + ppxx + "px)";
 
                     $li.get(currentLine - 1).className = "";
                     // $li.get(currentLine).className = "on";
 
-                    if (currentLine % 2 === 0) {
-                        $li.get(currentLine - 1).className = "on greymsg-last";
-                        $li.get(currentLine).className = "on bluemsg-last";
-                    } else {
-                        $li.get(currentLine - 1).className = "on bluemsg-last";
-                        $li.get(currentLine).className = "on greymsg-last";
-                    }
+                    // if (currentLine % 2 === 0) {
+                    $li.get(currentLine - 1).className = "on greymsg-last";
+                    $li.get(currentLine).className = "on bluemsg-last";
+                    // } else {
+                    //     $li.get(currentLine - 1).className = "on bluemsg-last";
+                    //     $li.get(currentLine).className = "on greymsg-last";
+                    // }
 
 
                     break;
