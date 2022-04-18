@@ -44,13 +44,13 @@
     <!--        <p style="color: #515044">青春未散场</p>-->
     <!--    </div>-->
     <!--    <div class="scene"><img src="../resources/video/scene.mp4" alt=""></div>-->
-<!--    <div class="scene"><img src="https://5618.oss-cn-beijing.aliyuncs.com/VIP/scene.mp4" alt=""></div>-->
-    <div id="scene" class="scene">
-        <video id="videoID" loop="loop">
-<!--            <source src="/resources/video/scene.mp4" type="video/mp4"/>-->
-            <source src="https://5618.oss-cn-beijing.aliyuncs.com/VIP/scene.mp4" type="video/mp4"/>
-        </video>
-    </div>
+    <div class="scene"><img src="https://5618.oss-cn-beijing.aliyuncs.com/VIP/scene.mp4" alt=""></div>
+<!--    <div id="scene" class="scene">-->
+<!--        <video id="videoID" loop="loop">-->
+<!--&lt;!&ndash;            <source src="/resources/video/scene.mp4" type="video/mp4"/>&ndash;&gt;-->
+<!--            <source src="https://5618.oss-cn-beijing.aliyuncs.com/VIP/scene.mp4" type="video/mp4"/>-->
+<!--        </video>-->
+<!--    </div>-->
     <div class="scene_mask"></div>
 
     <div id="top"></div>
@@ -108,7 +108,7 @@
 </div>
 
 <script>
-    var bgvideo = document.getElementById("videoID");
+    // var bgvideo = document.getElementById("videoID");
 
     var playBtn = document.getElementById('playBtn');
     var stopBtn = document.getElementById('stopBtn');
@@ -154,13 +154,13 @@
             $('.music-player-container').toggleClass('is-playing');
             $('.music-player-container').toggleClass('is-pausing');
 
-            bgvideo.play();
+            // bgvideo.play();
         } else {
             playBtn.src = "../resources/assets/play.svg";
             $('.music-player-container').toggleClass('is-pausing');
             $('.music-player-container').toggleClass('is-playing');
 
-            bgvideo.pause();
+            // bgvideo.pause();
         }
 
         stump.innerHTML = "<div id=\"msg5\" class=\"bubble\">\n" +
