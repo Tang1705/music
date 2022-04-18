@@ -75,6 +75,7 @@
     <div class="lyric" style="float:left;position:absolute;width:auto;margin-left:0;z-index: 60">
         <div id="timestamp" class="timestamp" style="z-index: 20;font-weight: bolder;position: absolute;left: 50%;top:10%"></div>
         <ul id="lrclist" style="transform: translateY(0px);width:500px"></ul>
+        <div id="stump"></div>
     </div>
 
     <div id="current-time"></div>
@@ -99,6 +100,21 @@
 
     var timestamp = document.getElementById("timestamp")
 
+    var myDate = new Date();
+    var hour = myDate.getHours();       //获取当前小时数(0-23)
+    var minute = myDate.getMinutes();     //获取当前分钟数(0-59)
+    var morning = "";
+    if (hour < 12) morning = "上午";
+    else {
+        morning = "下午";
+        if (hour > 12)
+            hour -= 12;
+    }
+
+    if (minute < 10) minute = "0" + minute;
+    var time = morning + " " + hour + ":" + minute;
+
+
     var wavesurfer = WaveSurfer.create({
         container: '#waveform',
         // waveColor: 'aqua',
@@ -113,7 +129,7 @@
     wavesurfer.load('./resources/music/music.flac');
 
     playBtn.onclick = function () {
-        timestamp.innerHTML = "<p style=\"color: white;\">上午 9:41</p>"
+        timestamp.innerHTML = "<p style=\"color: white;\">"+time+"</p>"
         wavesurfer.playPause();
         if (playBtn.src.includes("play.svg")) {
             playBtn.src = "./resources/assets/pause.svg";
@@ -124,6 +140,15 @@
             $('.music-player-container').toggleClass('is-pausing');
             $('.music-player-container').toggleClass('is-playing');
         }
+
+        stump.innerHTML = "<div id=\"msg5\" class=\"bubble\">\n" +
+            "            <div class=\"bubble-1\"></div>\n" +
+            "            <div class=\"dot-1\"></div>\n" +
+            "            <div class=\"dot-2\"></div>\n" +
+            "            <div class=\"dot-3\"></div>\n" +
+            "            <div class=\"bubble-2\"></div>\n" +
+            "            <div class=\"bubble-3\"></div>\n" +
+            "        </div>";
     }
 
     stopBtn.onclick = function () {
@@ -261,19 +286,19 @@
 
                 if (currentTime <= lrcTime[j + 1] && currentTime >= lrcTime[j]) {
                     currentLine = j;
-                    ppxx = 120 - (currentLine * 62);
+                    ppxx = 85 - (currentLine * 45.8);
                     ul.style.transform = "translateY(" + ppxx + "px)";
 
                     // $li.get(currentLine - 1).className = "";
 
-                    if (currentLine % 2 === 0){
+                    // if (currentLine % 2 === 0){
                         $li.get(currentLine-1).className = "on greymsg-last";
                         $li.get(currentLine).className = "on bluemsg-last";
-                    }
-                    else{
-                        $li.get(currentLine-1).className = "on bluemsg-last";
-                        $li.get(currentLine).className = "on greymsg-last";
-                    }
+                    // }
+                    // else{
+                    //     $li.get(currentLine-1).className = "on bluemsg-last";
+                    //     $li.get(currentLine).className = "on greymsg-last";
+                    // }
 
 
                     break;

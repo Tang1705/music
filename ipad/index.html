@@ -120,6 +120,8 @@
         if (hour > 12)
             hour -= 12;
     }
+
+    if (minute < 10) minute = "0" + minute;
     var time = morning + " " + hour + ":" + minute;
 
 

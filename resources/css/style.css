@@ -261,6 +261,7 @@ ul {
 ul, li {
     list-style: none;
     padding-top: 0.3rem;
+    padding-right: 10px;
     margin-top: 1rem;
     color: rgba(0, 0, 0, .0);
     font-size: 18px;
@@ -273,7 +274,7 @@ li.on {
     color: #ffffff;
     font-weight: bolder;
     letter-spacing: 2px;
-    height: 4rem;
+    height: 2.5rem;
     font-size: 24px;
 }
 
@@ -286,8 +287,8 @@ p {
     -webkit-box-orient: vertical;
     display: -webkit-box;
     text-align: center;
-    margin-top: 16px;
-    margin-bottom: 16px;
+    margin-top: 1px;
+    margin-bottom: 1px;
 }
 
 .progress-bar {
@@ -482,13 +483,14 @@ p {
 .bluemsg-last {
     position: relative;
     padding: 7px 20px;
+    margin-top: 1.3rem;
     margin-bottom: 2px;
     color: #fff;
-    background-color: #007aff;
-    background-image: -webkit-linear-gradient(#5ac8fa, #007aff);
-    background-image: -moz-linear-gradient(#5ac8fa, #007aff);
-    background-image: -o-linear-gradient(#5ac8fa, #007aff);
-    background-image: linear-gradient(#5ac8fa, #007aff);
+    background-color: rgba(0, 122, 255, 0.6);
+    /*background-image: -webkit-linear-gradient(#5ac8fa, #007aff);*/
+    /*background-image: -moz-linear-gradient(#5ac8fa, #007aff);*/
+    /*background-image: -o-linear-gradient(#5ac8fa, #007aff);*/
+    /*background-image: linear-gradient(#5ac8fa, #007aff);*/
     background-size: contain;
     background-attachment: fixed;
     border-radius: 21px;
@@ -500,41 +502,51 @@ p {
     content: "";
     position: absolute;
     z-index: -1;
-    bottom: -2px;
-    right: -7px;
-    height: 23px;
-    border-right: 20px solid transparent;
-    background-color: #007aff;
-    background-image: -webkit-linear-gradient(#5ac8fa, #007aff);
-    background-image: -moz-linear-gradient(#5ac8fa, #007aff);
-    background-image: -o-linear-gradient(#5ac8fa, #007aff);
-    background-image: linear-gradient(#5ac8fa, #007aff);
-    background-size: contain;
-    background-attachment: fixed;
-    border-bottom-left-radius: 16px 14px;
-    -webkit-transform: translate(0, -2px);
+    /*bottom: -2px;*/
+    top: 30%;
+    right: -11px;
+    height: 15px;
+    border-left: 12px solid rgba(0, 122, 255, 0.6);
+    /*background-color:rgba(0,122,255,0.8);*/
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    /*background-size: contain;*/
+    /*background-attachment: fixed;*/
+
+    /*border-right: 20px solid transparent;*/
+    /*background-color: #007aff;*/
+    /*background-image: -webkit-linear-gradient(#5ac8fa, #007aff);*/
+    /*background-image: -moz-linear-gradient(#5ac8fa, #007aff);*/
+    /*background-image: -o-linear-gradient(#5ac8fa, #007aff);*/
+    /*background-image: linear-gradient(#5ac8fa, #007aff);*/
+    /*background-size: contain;*/
+    /*background-attachment: fixed;*/
+    /*border-bottom-left-radius: 16px 14px;*/
+    /*-webkit-transform: translate(0, -2px);*/
 }
 
 .bluemsg-last::after {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    bottom: -2px;
-    right: -40px;
-    width: 10px;
-    height: 24px;
-    background: #fff;
-    border-bottom-left-radius: 10px;
-    -webkit-transform: translate(-30px, -2px);
+    /*content: "";*/
+    /*position: absolute;*/
+    /*z-index: 1;*/
+    /*bottom: -2px;*/
+    /*right: -40px;*/
+    /*width: 10px;*/
+    /*height: 24px;*/
+    /*background: #fff;*/
+    /*border-bottom-left-radius: 10px;*/
+    /*-webkit-transform: translate(-30px, -2px);*/
 }
 
 .greymsg-last {
     position: relative;
     padding: 7px 20px;
     margin-bottom: 2px;
-    background: #e5e5ea;
+    background: rgba(176, 176, 176, 0.6);
+    background-size: contain;
+    background-attachment: fixed;
     border-radius: 21px;
-    color: #333;
+    /*color: #333;*/
     float: left;
     clear: both;
 }
@@ -543,15 +555,21 @@ p {
     content: "";
     position: absolute;
     z-index: -1;
-    bottom: -2px;
-    left: -3px;
-    height: 23px;
-    border-left: 10px solid #e5e5ea;
-    border-bottom-right-radius: 16px 14px;
-    -webkit-transform: translate(3px, -3px);
+    /*bottom: -2px;*/
+    top: 30%;
+    left: -11px;
+    height: 15px;
+
+    border-right: 12px solid rgba(176, 176, 176, 0.6);
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+
+    /*border-left: 15px solid rgba(176,176,176,0.6);*/
+    /*border-bottom-right-radius: 16px 14px;*/
+    /*-webkit-transform: translate(7px, -3px);*/
 }
 
-.greymsg-last::after{
+.greymsg-last::after {
     /*content: "";*/
     /*position: absolute;*/
     /*z-index: 1;*/
@@ -564,12 +582,183 @@ p {
     /*-webkit-transform: translate(-30px,-2px);*/
 }
 
-.bluemsg-last, .pic-sent-info, .pic-sent-info-last {
-    background-color: #007aff;
-    background-image: none;
+.bubble {
+    position: absolute;
+    top: 44%;
+    left: 10%;
+    display: block;
+    /*position: relative;*/
+    width: 110px;
+    height: 44px;
+    float: left;
+    clear: both;
 }
 
-.bluemsg-last:before, .pic-sent-info-last:before {
-    background-color: #007aff;
-    background-image: none;
+[class^="bubble-"] {
+    position: absolute;
+    background: rgba(176, 176, 176, 0.7);
+}
+
+[class^="dot-"] {
+    position: absolute;
+    top: 12.5px;
+    width: 11px;
+    height: 11px;
+    background: rgba(196, 196, 196, 0.6);
+    border-radius: 20px;
+}
+
+.bubble-1 {
+    left: 0px;
+    width: 77px;
+    height: 34px;
+    border-radius: 22px;
+    animation: bubble-1 1s linear 0s infinite alternate;
+}
+
+.bubble-2 {
+    left: 0px;
+    bottom: 7px;
+    width: 16px;
+    height: 16px;
+    border-radius: 20px;
+    animation: bubble-2 calc(2s / 3) linear 0s infinite alternate;
+}
+
+.bubble-3 {
+    left: -5px;
+    bottom: 2px;
+    width: 8px;
+    height: 8px;
+    border-radius: 16px;
+    animation: bubble-3 .4s linear 0s infinite alternate;
+}
+
+.dot-1 {
+    left: 16px;
+    animation: dot 1s linear 0s infinite alternate;
+}
+
+.dot-2 {
+    left: 33px;
+    animation: dot 1s linear calc(1s / 3) infinite alternate;
+}
+
+.dot-3 {
+    left: 50px;
+    animation: dot 1s linear calc(2s / 3) infinite alternate;
+}
+
+@keyframes bubble-1 {
+    from {
+        transform: scale(.95);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes bubble-2 {
+    from {
+        transform: scale(.8);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes bubble-3 {
+    from {
+        transform: scale(.8);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes dot {
+    0% {
+        background: #DADADE;
+    }
+    33.33% {
+        background: #9FA0A4;
+    }
+    100% {
+        background: #DADADE;
+    }
+}
+
+@keyframes a {
+    from {
+        transform: translateY(222px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes b {
+    from {
+        transform: translateY(176px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes c {
+    from {
+        transform: translate(-80px, -110px) scale(.6);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0px, -115px);
+        opacity: 1;
+    }
+}
+
+@keyframes d {
+    from {
+        transform: translateY(-115px);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-115px);
+        opacity: 0;
+    }
+}
+
+@keyframes e {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes f {
+    from {
+        transform: scale(.7);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes g {
+    from {
+        transform: translate(-80px, 10px) scale(.6);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0) scale(1);
+        opacity: 1;
+    }
 }
