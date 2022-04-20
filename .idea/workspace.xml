@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c481e76b-1971-4521-93aa-2371f93f9c9c" name="Changes" comment="Changes">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ipad/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ipad/index.html" afterDir="false" />
@@ -51,10 +52,10 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/music" />
+      <recent name="$PROJECT_DIR$/resources/video" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/resources/img" />
       <recent name="$PROJECT_DIR$/v2" />
-      <recent name="$PROJECT_DIR$/resources/assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/video" />
@@ -112,7 +113,7 @@
       <workItem from="1650185282310" duration="12762000" />
       <workItem from="1650201206356" duration="5700000" />
       <workItem from="1650207386065" duration="847000" />
-      <workItem from="1650208264686" duration="22227000" />
+      <workItem from="1650208264686" duration="23431000" />
     </task>
     <servers />
   </component>
