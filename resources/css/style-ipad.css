@@ -42,13 +42,13 @@ body {
 #left-top p {
     /*color: lightgray;*/
     font-size: 224pt;
-    /*font-weight: bolder;*/
+    font-weight: bolder;
     height: 80%;
     margin-top: 16px;
     margin-bottom: 16px;
     padding-top: 18rem;
     padding-left: 3.5rem;
-    color: rgba(0, 0, 0, .07);
+    color: rgba(0, 0, 0);
     /*z-index: 1;*/
     position: absolute;
     transform: translate(13%, -50%);
