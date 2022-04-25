@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>test</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: rgba(255, 192, 203, 0.82);
+      transition: width 2s;
+      animation: fold-out .3s ease-in-out;
+      /*-webkit-transition: width 2s;*/
+    }
+
+    @keyframes fold-out {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+
+
+  </style>
+</head>
+<body>
+<div class="box"></div>
+</body>
+</html>

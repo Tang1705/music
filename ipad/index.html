@@ -43,14 +43,14 @@
     <!--    <div style="position: absolute; z-index: 55;font-weight: bolder;font-size: 22px;margin-top: 0.9rem;right: 35%">-->
     <!--        <p style="color: #515044">青春未散场</p>-->
     <!--    </div>-->
-        <div class="scene"><img src="../resources/video/scene.mp4" alt=""></div>
+    <div class="scene"><img src="../resources/video/scene.mp4" alt=""></div>
     <div class="scene"><img src="https://5618.oss-cn-beijing.aliyuncs.com/VIP/scene.mp4" alt=""></div>
-<!--    <div id="scene" class="scene">-->
-<!--        <video id="videoID" loop="loop">-->
-<!--&lt;!&ndash;            <source src="/resources/video/scene.mp4" type="video/mp4"/>&ndash;&gt;-->
-<!--            <source src="https://5618.oss-cn-beijing.aliyuncs.com/VIP/scene.mp4" type="video/mp4"/>-->
-<!--        </video>-->
-<!--    </div>-->
+    <!--    <div id="scene" class="scene">-->
+    <!--        <video id="videoID" loop="loop">-->
+    <!--&lt;!&ndash;            <source src="/resources/video/scene.mp4" type="video/mp4"/>&ndash;&gt;-->
+    <!--            <source src="https://5618.oss-cn-beijing.aliyuncs.com/VIP/scene.mp4" type="video/mp4"/>-->
+    <!--        </video>-->
+    <!--    </div>-->
     <div class="scene_mask"></div>
 
     <div id="top"></div>
@@ -82,6 +82,8 @@
              style="z-index: 20;font-weight: bolder;position: absolute;left: 50%;top:5%"></div>
         <ul id="lrclist" style="transform: translateY(0px);width:375px"></ul>
         <div id="stump"></div>
+<!--        <div id="receive" class="greymsg-last"><p></p></div>-->
+
         <!--        <div id="msg5" class="bubble">-->
         <!--            <div class="bubble-1"></div>-->
         <!--            <div class="dot-1"></div>-->
@@ -163,14 +165,16 @@
             // bgvideo.pause();
         }
 
-        stump.innerHTML = "<div id=\"msg5\" class=\"bubble\">\n" +
-            "            <div class=\"bubble-1\"></div>\n" +
-            "            <div class=\"dot-1\"></div>\n" +
-            "            <div class=\"dot-2\"></div>\n" +
-            "            <div class=\"dot-3\"></div>\n" +
-            "            <div class=\"bubble-2\"></div>\n" +
-            "            <div class=\"bubble-3\"></div>\n" +
-            "        </div>";
+        setTimeout(function () {
+            stump.innerHTML = "<div id=\"msg5\" class=\"bubble\">\n" +
+                "            <div class=\"bubble-1\"></div>\n" +
+                "            <div class=\"dot-1\"></div>\n" +
+                "            <div class=\"dot-2\"></div>\n" +
+                "            <div class=\"dot-3\"></div>\n" +
+                "            <div class=\"bubble-2\"></div>\n" +
+                "            <div class=\"bubble-3\"></div>\n" +
+                "        </div>";
+        }, 3000);
     }
 
     stopBtn.onclick = function () {
@@ -200,64 +204,64 @@
 
 
     var lrcJSON = {
-        "[00:00.00]":"蔚蓝海岸",
-        "[00:02.46]":"漫步蔚蓝色海岸",
-        "[00:04.71]":"我把吉他轻轻弹",
-        "[00:07.71]":"你在身边做个伴",
-        "[00:09.84]":"笑容温柔灿烂",
-        "[00:15.00]":"hey girl 我闻着你的呼吸",
-        "[00:17.70]":"你像一场梦境如此神秘",
-        "[00:20.40]":"有你的风景",
-        "[00:21.72]":"我像在风里",
-        "[00:23.04]":"吹散了雾气从多云转晴",
-        "[00:25.59]":"你听心跳越快时间就越慢",
-        "[00:28.17]":"一看到你就让我呼吸混乱",
-        "[00:30.75]":"用背景渲染",
-        "[00:32.07]":"你眼底的蓝",
-        "[00:33.33]":"沉浸式片段音乐太舒缓",
-        "[00:35.94]":"love ",
-        "[00:41.10]":"这种感觉奇妙又梦幻",
-        "[00:46.20]":"我的嘴角在转弯",
-        "[00:48.63]":"有话只能讲一半",
-        "[00:51.39]":"思绪在满天飞散",
-        "[00:53.70]":"想要和你牵手去沙滩",
-        "[00:56.64]":"漫步蔚蓝色海岸",
-        "[00:58.89]":"我把吉他轻轻弹",
-        "[01:01.71]":"你在身边做个伴",
-        "[01:04.01]":"笑容温柔灿烂",
-        "[01:16.95]":"我把时钟调慢",
-        "[01:18.36]":"和你多待几分钟",
-        "[01:19.65]":"用我自由交换",
-        "[01:20.85]":"喜欢你的每秒钟",
-        "[01:22.32]":"我的思绪放空",
-        "[01:23.49]":"和你磁力相通",
-        "[01:24.93]":"对你的需要就像氧气持续畅通",
-        "[01:27.51]":"不论多远我都能找到你",
-        "[01:32.67]":"就让海风带给你我心意",
-        "[01:37.92]":"我的嘴角在转弯",
-        "[01:40.23]":"有话只能讲一半",
-        "[01:43.02]":"思绪在满天飞散",
-        "[01:45.33]":"想要和你牵手去沙滩",
-        "[01:48.27]":"漫步蔚蓝色海岸",
-        "[01:50.52]":"我把吉他轻轻弹",
-        "[01:53.40]":"你在身边做个伴",
-        "[01:55.65]":"笑容温柔灿烂",
-        "[01:58.53]":"我的嘴角在转弯",
-        "[02:00.93]":"有话只能讲一半",
-        "[02:03.78]":"思绪在满天飞散",
-        "[02:05.97]":"想要和你牵手去沙滩",
-        "[02:08.94]":"漫步蔚蓝色海岸",
-        "[02:11.25]":"我把吉他轻轻弹",
-        "[02:14.13]":"你在身边做个伴",
-        "[02:16.35]":"笑容温柔灿烂",
-        "[02:19.20]":"我的嘴角在转弯",
-        "[02:21.48]":"有话只能讲一半",
-        "[02:24.30]":"思绪在满天飞散",
-        "[02:26.61]":"想要和你牵手去沙滩",
-        "[02:29.55]":"漫步蔚蓝色海岸",
-        "[02:31.80]":"我把吉他轻轻弹",
-        "[02:34.68]":"你在身边做个伴",
-        "[02:36.93]":"笑容温柔灿烂",
+        "[00:00.00]": "蔚蓝海岸",
+        "[00:02.46]": "漫步蔚蓝色海岸",
+        "[00:04.71]": "我把吉他轻轻弹",
+        "[00:07.71]": "你在身边做个伴",
+        "[00:09.84]": "笑容温柔灿烂",
+        "[00:15.00]": "hey girl 我闻着你的呼吸",
+        "[00:17.70]": "你像一场梦境如此神秘",
+        "[00:20.40]": "有你的风景",
+        "[00:21.72]": "我像在风里",
+        "[00:23.04]": "吹散了雾气从多云转晴",
+        "[00:25.59]": "你听心跳越快时间就越慢",
+        "[00:28.17]": "一看到你就让我呼吸混乱",
+        "[00:30.75]": "用背景渲染",
+        "[00:32.07]": "你眼底的蓝",
+        "[00:33.33]": "沉浸式片段音乐太舒缓",
+        "[00:35.94]": "love ",
+        "[00:41.10]": "这种感觉奇妙又梦幻",
+        "[00:46.20]": "我的嘴角在转弯",
+        "[00:48.63]": "有话只能讲一半",
+        "[00:51.39]": "思绪在满天飞散",
+        "[00:53.70]": "想要和你牵手去沙滩",
+        "[00:56.64]": "漫步蔚蓝色海岸",
+        "[00:58.89]": "我把吉他轻轻弹",
+        "[01:01.71]": "你在身边做个伴",
+        "[01:04.01]": "笑容温柔灿烂",
+        "[01:16.95]": "我把时钟调慢",
+        "[01:18.36]": "和你多待几分钟",
+        "[01:19.65]": "用我自由交换",
+        "[01:20.85]": "喜欢你的每秒钟",
+        "[01:22.32]": "我的思绪放空",
+        "[01:23.49]": "和你磁力相通",
+        "[01:24.93]": "对你的需要就像氧气持续畅通",
+        "[01:27.51]": "不论多远我都能找到你",
+        "[01:32.67]": "就让海风带给你我心意",
+        "[01:37.92]": "我的嘴角在转弯",
+        "[01:40.23]": "有话只能讲一半",
+        "[01:43.02]": "思绪在满天飞散",
+        "[01:45.33]": "想要和你牵手去沙滩",
+        "[01:48.27]": "漫步蔚蓝色海岸",
+        "[01:50.52]": "我把吉他轻轻弹",
+        "[01:53.40]": "你在身边做个伴",
+        "[01:55.65]": "笑容温柔灿烂",
+        "[01:58.53]": "我的嘴角在转弯",
+        "[02:00.93]": "有话只能讲一半",
+        "[02:03.78]": "思绪在满天飞散",
+        "[02:05.97]": "想要和你牵手去沙滩",
+        "[02:08.94]": "漫步蔚蓝色海岸",
+        "[02:11.25]": "我把吉他轻轻弹",
+        "[02:14.13]": "你在身边做个伴",
+        "[02:16.35]": "笑容温柔灿烂",
+        "[02:19.20]": "我的嘴角在转弯",
+        "[02:21.48]": "有话只能讲一半",
+        "[02:24.30]": "思绪在满天飞散",
+        "[02:26.61]": "想要和你牵手去沙滩",
+        "[02:29.55]": "漫步蔚蓝色海岸",
+        "[02:31.80]": "我把吉他轻轻弹",
+        "[02:34.68]": "你在身边做个伴",
+        "[02:36.93]": "笑容温柔灿烂",
     };
 
 
@@ -295,15 +299,19 @@
 
                 if (currentTime <= lrcTime[j + 1] && currentTime >= lrcTime[j]) {
                     currentLine = j;
+                    var duration = lrcTime[j + 1] - lrcTime[j] - 0.5
                     ppxx = 65 - (currentLine * 46);
                     ul.style.transform = "translateY(" + ppxx + "px)";
 
-                    $li.get(currentLine - 1).className = "";
+                    // $li.get(currentLine - 1).className = "";
                     // $li.get(currentLine).className = "on";
 
                     // if (currentLine % 2 === 0) {
+                    // document.getElementById("receive").innerHTML = "<p>" + $li.get(currentLine - 1).innerText + "</p>";
                     $li.get(currentLine - 1).className = "on greymsg-last";
+                    $li.get(currentLine - 1).style = "animation: lfold-in .5s ease-in-out, lfold-out .5s ease-in-out " + duration + "s;"
                     $li.get(currentLine).className = "on bluemsg-last";
+                    $li.get(currentLine).style = "animation: fold-in .5s ease-in-out, fold-out .5s ease-in-out " + duration + "s;"
                     // } else {
                     //     $li.get(currentLine - 1).className = "on bluemsg-last";
                     //     $li.get(currentLine).className = "on greymsg-last";
