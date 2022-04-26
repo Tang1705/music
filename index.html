@@ -289,6 +289,7 @@
 
                 if (currentTime <= lrcTime[j + 1] && currentTime >= lrcTime[j]) {
                     currentLine = j;
+                    var duration = lrcTime[j + 1] - lrcTime[j] - 0.5
                     ppxx = 85 - (currentLine * 45.8);
                     ul.style.transform = "translateY(" + ppxx + "px)";
 
@@ -296,7 +297,10 @@
 
                     // if (currentLine % 2 === 0){
                     $li.get(currentLine - 1).className = "on greymsg-last";
+                    $li.get(currentLine - 1).style = "animation: lfold-in .5s ease-in-out, lfold-out .5s ease-in-out " + duration + "s;"
                     $li.get(currentLine).className = "on bluemsg-last";
+                    $li.get(currentLine).style = "animation: fold-in .5s ease-in-out, fold-out .5s ease-in-out " + duration + "s;"
+
                     // }
                     // else{
                     //     $li.get(currentLine-1).className = "on bluemsg-last";
