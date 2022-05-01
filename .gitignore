@@ -6,3 +6,4 @@
 # 忽略指定文件夹
 ignore/
 resources/video/
+tiler/

@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c481e76b-1971-4521-93aa-2371f93f9c9c" name="Changes" comment="Changes">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ipad/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ipad/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/music/music.flac" beforeDir="false" afterPath="$PROJECT_DIR$/resources/music/music.flac" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiler/conf.py" beforeDir="false" afterPath="$PROJECT_DIR$/tiler/conf.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiler/tiler.py" beforeDir="false" afterPath="$PROJECT_DIR$/tiler/tiler.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +34,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="262AYXiRb1ueGZp6Z2AYbC45EWS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -116,7 +120,9 @@
       <workItem from="1650792425879" duration="15174000" />
       <workItem from="1650895638709" duration="4350000" />
       <workItem from="1651137488736" duration="1153000" />
-      <workItem from="1651222058481" duration="1304000" />
+      <workItem from="1651222058481" duration="1427000" />
+      <workItem from="1651226992406" duration="965000" />
+      <workItem from="1651330548916" duration="1437000" />
     </task>
     <servers />
   </component>
