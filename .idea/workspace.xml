@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c481e76b-1971-4521-93aa-2371f93f9c9c" name="Changes" comment="Changes">
-      <change beforePath="$PROJECT_DIR$/.idea/music.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/music.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ipad/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ipad/index.html" afterDir="false" />
@@ -43,7 +42,7 @@
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/tq/Desktop/music/resources/video",
+    "last_opened_file_path": "/Users/tq/Desktop/music/resources/music",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -53,8 +52,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/video" />
       <recent name="$PROJECT_DIR$/resources/music" />
+      <recent name="$PROJECT_DIR$/resources/video" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/resources/img" />
       <recent name="$PROJECT_DIR$/v2" />
@@ -124,7 +123,8 @@
       <workItem from="1651226992406" duration="965000" />
       <workItem from="1651330548916" duration="1876000" />
       <workItem from="1651421045567" duration="31000" />
-      <workItem from="1651574742072" duration="3091000" />
+      <workItem from="1651574742072" duration="3351000" />
+      <workItem from="1651738869803" duration="788000" />
     </task>
     <servers />
   </component>
