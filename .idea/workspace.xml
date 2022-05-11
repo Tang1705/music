@@ -42,7 +42,7 @@
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/tq/Desktop/music/resources/video",
+    "last_opened_file_path": "/Users/tq/Desktop/music/resources/music",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -52,8 +52,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/video" />
       <recent name="$PROJECT_DIR$/resources/music" />
+      <recent name="$PROJECT_DIR$/resources/video" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/resources/img" />
       <recent name="$PROJECT_DIR$/v2" />
@@ -128,7 +128,7 @@
       <workItem from="1651918572786" duration="870000" />
       <workItem from="1651942222526" duration="271000" />
       <workItem from="1651977074450" duration="2051000" />
-      <workItem from="1652070343439" duration="2543000" />
+      <workItem from="1652070343439" duration="4752000" />
     </task>
     <servers />
   </component>
