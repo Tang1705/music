@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c481e76b-1971-4521-93aa-2371f93f9c9c" name="Changes" comment="Changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ipad/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ipad/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/music/music.flac" beforeDir="false" afterPath="$PROJECT_DIR$/resources/music/music.flac" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tiler/conf.py" beforeDir="false" afterPath="$PROJECT_DIR$/tiler/conf.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tiler/tiler.py" beforeDir="false" afterPath="$PROJECT_DIR$/tiler/tiler.py" afterDir="false" />
@@ -40,7 +42,7 @@
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/tq/Desktop/music/resources/music",
+    "last_opened_file_path": "/Users/tq/Desktop/music/resources/video",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -50,8 +52,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/music" />
       <recent name="$PROJECT_DIR$/resources/video" />
+      <recent name="$PROJECT_DIR$/resources/music" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/resources/img" />
       <recent name="$PROJECT_DIR$/v2" />
@@ -126,7 +128,7 @@
       <workItem from="1651918572786" duration="870000" />
       <workItem from="1651942222526" duration="271000" />
       <workItem from="1651977074450" duration="2051000" />
-      <workItem from="1652070343439" duration="5800000" />
+      <workItem from="1652070343439" duration="7560000" />
     </task>
     <servers />
   </component>
