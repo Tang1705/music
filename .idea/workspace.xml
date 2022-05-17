@@ -8,7 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ipad/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ipad/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/music/music.flac" beforeDir="false" afterPath="$PROJECT_DIR$/resources/music/music.flac" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tiler/conf.py" beforeDir="false" afterPath="$PROJECT_DIR$/tiler/conf.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tiler/tiler.py" beforeDir="false" afterPath="$PROJECT_DIR$/tiler/tiler.py" afterDir="false" />
     </list>
@@ -129,6 +128,9 @@
       <workItem from="1651942222526" duration="271000" />
       <workItem from="1651977074450" duration="2051000" />
       <workItem from="1652070343439" duration="7996000" />
+      <workItem from="1652522948387" duration="780000" />
+      <workItem from="1652611908120" duration="237000" />
+      <workItem from="1652773219434" duration="876000" />
     </task>
     <servers />
   </component>
