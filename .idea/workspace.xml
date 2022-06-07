@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c481e76b-1971-4521-93aa-2371f93f9c9c" name="Changes" comment="Changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ipad/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ipad/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/music/music.flac" beforeDir="false" afterPath="$PROJECT_DIR$/resources/music/music.flac" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +40,7 @@
   &quot;keyToString&quot;: {
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/tq/Desktop/music/resources/music&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/tq/Desktop/music/resources/video&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -47,8 +50,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/music" />
       <recent name="$PROJECT_DIR$/resources/video" />
+      <recent name="$PROJECT_DIR$/resources/music" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/resources/img" />
       <recent name="$PROJECT_DIR$/v2" />
@@ -138,6 +141,9 @@
       <workItem from="1654255365418" duration="2331000" />
       <workItem from="1654311796328" duration="640000" />
       <workItem from="1654313713925" duration="638000" />
+      <workItem from="1654413839716" duration="220000" />
+      <workItem from="1654418675728" duration="522000" />
+      <workItem from="1654600269637" duration="340000" />
     </task>
     <servers />
   </component>
