@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c481e76b-1971-4521-93aa-2371f93f9c9c" name="Changes" comment="Changes">
       <change beforePath="$PROJECT_DIR$/ipad/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ipad/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/video/scene.mp4" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +143,7 @@
       <workItem from="1654600269637" duration="863000" />
       <workItem from="1654690823944" duration="571000" />
       <workItem from="1654691447066" duration="594000" />
-      <workItem from="1654743227707" duration="730000" />
+      <workItem from="1654743227707" duration="1228000" />
     </task>
     <servers />
   </component>
