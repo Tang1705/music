@@ -110,7 +110,7 @@
 </div>
 
 <script>
-    // var bgvideo = document.getElementById("videoID");
+    var bgvideo = document.getElementById("videoID");
 
     var playBtn = document.getElementById('playBtn');
     var stopBtn = document.getElementById('stopBtn');
@@ -156,13 +156,13 @@
             $('.music-player-container').toggleClass('is-playing');
             $('.music-player-container').toggleClass('is-pausing');
 
-            // bgvideo.play();
+            bgvideo.play();
         } else {
             playBtn.src = "../resources/assets/play.svg";
             $('.music-player-container').toggleClass('is-pausing');
             $('.music-player-container').toggleClass('is-playing');
 
-            // bgvideo.pause();
+            bgvideo.pause();
         }
 
         setTimeout(function () {

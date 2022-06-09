@@ -5,5 +5,5 @@
 
 # 忽略指定文件夹
 ignore/
-resources/video/scene.prproj
+resources/video/
 tiler/
