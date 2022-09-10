@@ -5,66 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c481e76b-1971-4521-93aa-2371f93f9c9c" name="Changes" comment="Changes">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/music.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/music.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CNAME" beforeDir="false" afterPath="$PROJECT_DIR$/CNAME" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bit_favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/bit_favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ipad/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ipad/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/diyin.svg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/diyin.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/diyin1.svg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/diyin1.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/gaoyin.svg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/gaoyin.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/gaoyin1.svg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/gaoyin1.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/icon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/icon.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/music.svg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/music.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/mute.svg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/mute.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/pause.svg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/pause.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/play.svg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/play.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/stop.svg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/stop.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/vip.svg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/vip.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/volume.svg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/volume.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/avater-ipad.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/avater-ipad.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/avater.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/avater.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/style-ipad.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/style-ipad.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/font/SourceHanSerifCN-VF.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/resources/font/SourceHanSerifCN-VF.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/img/cover.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/img/cover.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/img/cover.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/img/cover.pptx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/img/disk.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/img/disk.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/img/qt.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/img/qt.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/img/tang-ps.gif" beforeDir="false" afterPath="$PROJECT_DIR$/resources/img/tang-ps.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/img/tang.gif" beforeDir="false" afterPath="$PROJECT_DIR$/resources/img/tang.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/img/yolk-ps.gif" beforeDir="false" afterPath="$PROJECT_DIR$/resources/img/yolk-ps.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/img/yolk.gif" beforeDir="false" afterPath="$PROJECT_DIR$/resources/img/yolk.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/live2dcubismcore.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/live2dcubismcore.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/live2dcubismcore.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/live2dcubismcore.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/yolk_bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/yolk_bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/live2d/tang/tang.1024/texture_00.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/live2d/tang/tang.1024/texture_00.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/live2d/tang/tang.cdi3.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/live2d/tang/tang.cdi3.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/live2d/tang/tang.moc3" beforeDir="false" afterPath="$PROJECT_DIR$/resources/live2d/tang/tang.moc3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/live2d/tang/tang.model3.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/live2d/tang/tang.model3.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/live2d/tang/tang.motion3.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/live2d/tang/tang.motion3.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/live2d/yolk/yolk.1024/texture_00.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/live2d/yolk/yolk.1024/texture_00.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/live2d/yolk/yolk.can3" beforeDir="false" afterPath="$PROJECT_DIR$/resources/live2d/yolk/yolk.can3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/live2d/yolk/yolk.cdi3.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/live2d/yolk/yolk.cdi3.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/live2d/yolk/yolk.moc3" beforeDir="false" afterPath="$PROJECT_DIR$/resources/live2d/yolk/yolk.moc3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/live2d/yolk/yolk.model3.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/live2d/yolk/yolk.model3.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/live2d/yolk/yolk.motion3.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/live2d/yolk/yolk.motion3.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/music/music.flac" beforeDir="false" afterPath="$PROJECT_DIR$/resources/music/music.flac" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tang.html" beforeDir="false" afterPath="$PROJECT_DIR$/tang.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tang_ipad.html" beforeDir="false" afterPath="$PROJECT_DIR$/tang_ipad.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/v1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/v1/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/v1/ipad/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/v1/ipad/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/v2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/v2/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/v2/ipad/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/v2/ipad/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yolk.html" beforeDir="false" afterPath="$PROJECT_DIR$/yolk.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yolk_ipad.html" beforeDir="false" afterPath="$PROJECT_DIR$/yolk_ipad.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,18 +33,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/tq/Desktop/VIP/meta/music/resources/music&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/tq/Desktop/VIP/meta/music/resources/video",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/music" />
@@ -223,7 +164,8 @@
       <workItem from="1658374253391" duration="1391000" />
       <workItem from="1658569429332" duration="336000" />
       <workItem from="1660972955418" duration="923000" />
-      <workItem from="1662799602606" duration="968000" />
+      <workItem from="1662799602606" duration="1402000" />
+      <workItem from="1662802264231" duration="314000" />
     </task>
     <servers />
   </component>
