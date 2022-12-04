@@ -21,6 +21,7 @@
         <option value="CSS File" />
         <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="package.json" />
       </list>
     </option>
   </component>
@@ -42,11 +43,12 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/tq/Desktop/VIP/meta/music/resources/video",
+    "last_opened_file_path": "/Users/tq/Desktop/TODO/Private/VIP/meta/music",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -172,6 +174,8 @@
       <workItem from="1662799602606" duration="1402000" />
       <workItem from="1662802264231" duration="794000" />
       <workItem from="1664445731809" duration="303000" />
+      <workItem from="1670032556560" duration="993000" />
+      <workItem from="1670122784292" duration="316000" />
     </task>
     <servers />
   </component>
