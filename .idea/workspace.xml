@@ -8,6 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ipad/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ipad/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lyric.json" beforeDir="false" afterPath="$PROJECT_DIR$/lyric.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/music/music.flac" beforeDir="false" afterPath="$PROJECT_DIR$/resources/music/music.flac" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +44,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/tq/Desktop/TODO/Private/VIP/meta/music",
+    "last_opened_file_path": "/Users/tq/Desktop/TODO/VIP/meta/music/resources/music",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -54,8 +55,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/video" />
       <recent name="$PROJECT_DIR$/resources/music" />
+      <recent name="$PROJECT_DIR$/resources/video" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/resources/img" />
       <recent name="$PROJECT_DIR$/v2" />
@@ -175,7 +176,10 @@
       <workItem from="1662802264231" duration="794000" />
       <workItem from="1664445731809" duration="303000" />
       <workItem from="1670032556560" duration="993000" />
-      <workItem from="1670122784292" duration="316000" />
+      <workItem from="1670122784292" duration="663000" />
+      <workItem from="1675602172010" duration="174000" />
+      <workItem from="1675602886138" duration="247000" />
+      <workItem from="1676201343530" duration="300000" />
     </task>
     <servers />
   </component>
